@@ -16,6 +16,12 @@ body {
   max-height: 100%;
   max-width: 100%;
 }
+.home-body figure.masthead #canvas {
+  height: 100%;
+  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+}
 .home-body .header-content {
   position: absolute;
   top: 50%;
@@ -30,6 +36,64 @@ body {
   color: darkorchid;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: dimgray;
+  color: black;
+}
+nav a {
+  color: black;
+}
+
+#Portfolio {
+  padding: 10px;
+  background-color: #f6f6f6;
+}
+#Portfolio .section-header {
+  font-size: 28px;
+  margin: auto;
+  border-bottom: 2px solid black;
+}
+#Portfolio .portfolio-display {
+  width: 100%;
+  padding: 10px 0;
+}
+#Portfolio .portfolio-display ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  list-style: none;
+}
+#Portfolio .portfolio-display ul:not(:hover) li {
+  opacity: 1 !important;
+}
+#Portfolio .portfolio-display ul:not(:hover) li img {
+  filter: grayscale(0) !important;
+}
+#Portfolio .portfolio-display ul li {
+  display: inline;
+  padding: 10px;
+}
+#Portfolio .portfolio-display ul li:hover {
+  opacity: 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#Portfolio .portfolio-display ul li:not(:hover) {
+  opacity: 0.4;
+}
+#Portfolio .portfolio-display ul li:not(:hover) img {
+  filter: grayscale(50%);
+}
+#Portfolio .portfolio-display ul li figure img {
+  width: 300px;
+  height: 200px;
+  max-width: 300px;
+  max-height: 300px;
+}
 .content-center {
   /* padding-left: auto;
   padding-right: auto; */
@@ -78,32 +142,6 @@ div.animation {
     top: 0px;
   }
 }
-nav {
-  position: fixed;
-  top: 0;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 200px;
-  background-color: #f1f1f1;
-}
-
-li a {
-  display: inline-flex;
-  color: #000;
-  padding: 8px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color on hover */
-li a:hover {
-  background-color: #555;
-  color: white;
-}
-
 .typewriter h1 {
   text-align: left;
   color: #fff;
