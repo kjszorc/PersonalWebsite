@@ -28,16 +28,11 @@
         </h1>
       </div> 
     </div>
-    <div>
 
-    </div>
- 
     <div class="container">
-      <div id="About" class="row tall">
-        <div class="col-6 content-center ">
-            <h1>About.</h1>
-        </div>
-        <div class="col-6 content-center">
+      <div id="About" class="row about-tall">
+        <div class="section-header">About</div>
+        <div class="content-about content-center">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
 
@@ -49,39 +44,48 @@
           <div class="section-header">Portfolio</div>
           <div class="portfolio-display">
             <ul>
-              <li>
+              <li class="myBtn" on-click="openModal">
                 <figure>
-                    <!-- <img src="img/hyatt-home.png"> -->
                     <img src="img/WorldOfHyattLoyaltyProgram.png">
                 </figure>
-                <div class="portfolio-short">
-                    Hyatt<br/>
-                    VueJS and Java with AEM
+                <div class="portfolio-name">
+                    Hyatt
                 </div>
               </li>
               <li>
                 <figure>
                     <img src="img/levinson-home.jpg">
                 </figure>
-                Levinson
+                <div class="portfolio-name">
+                  Levinson
+                </div>
+                
               </li>
               <li>
                 <figure>
                     <img src="img/shipbob-home.jpg">
                 </figure>
-                Shipbob
+                <div class="portfolio-name">
+                  Shipbob
+                </div>
+                
               </li>
               <li>
                 <figure>
                     <img src="img/shipbob-home.jpg">
                 </figure>
-                Geneca
+                <div class="portfolio-name">
+                  Geneca
+                </div>
+                
               </li>
               <li>
                 <figure>
                     <img src="img/cmt-home.png">
                 </figure>
-                xCelor/CMT
+                <div class="portfolio-name">
+                  xCelor/CMT
+                </div>              
               </li>
             </ul>
           </div>
@@ -89,16 +93,28 @@
       </div>
 
       <div class="container">
-        <div id="Contact" class="row tall">
-          <div class="">
-              <h1>Contact</h1>
-          </div>
-          <div class="">
+        <div id="Contact" class="row contact-tall">
+          <div class="section-header">Contacts</div>
+          <div class="content-contact content-center">
             Like what you see? Let's get in touch!
           </div>
-  
         </div>
       </div>
+
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Some text in the Modal..</p>
+      <p>Some text in the Modal..</p>
+      <p>Some text in the Modal..</p>
+    </div>
+  </div>
+
+
   </body>
 </html>
 

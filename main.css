@@ -49,14 +49,24 @@ nav a {
   color: black;
 }
 
-#Portfolio {
-  padding: 10px;
-  background-color: #f6f6f6;
-}
-#Portfolio .section-header {
+.section-header {
   font-size: 28px;
   margin: auto;
   border-bottom: 2px solid black;
+}
+
+.about-tall {
+  height: 400px;
+}
+
+.content-about {
+  margin: 20px;
+  padding: 20px;
+}
+
+#Portfolio {
+  padding: 10px;
+  background-color: #f6f6f6;
 }
 #Portfolio .portfolio-display {
   width: 100%;
@@ -81,6 +91,7 @@ nav a {
 #Portfolio .portfolio-display ul li:hover {
   opacity: 1;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
 }
 #Portfolio .portfolio-display ul li:not(:hover) {
   opacity: 0.4;
@@ -94,12 +105,54 @@ nav a {
   max-width: 300px;
   max-height: 300px;
 }
+#Portfolio .portfolio-display ul li .portfolio-name {
+  font-size: 22px;
+  text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+  display: block;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 2px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+
 .content-center {
   /* padding-left: auto;
   padding-right: auto; */
   text-align: center;
   vertical-align: center;
   margin: auto;
+}
+
+.contact-tall {
+  height: 300px;
 }
 
 div.animation {
