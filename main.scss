@@ -96,6 +96,13 @@ nav {
                 }
             }
 
+            // &:not(:hover) li {
+            //     opacity: 1 !important;
+            //     img {
+            //         filter: grayscale(0) !important;
+            //     }
+            // }
+
             li {
                 display: inline;
                 padding: 10px;
@@ -149,9 +156,8 @@ nav {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
+
+      /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
@@ -159,6 +165,10 @@ nav {
     border: 2px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
   }
+  
+}
+  
+
 
 .content-center{
     /* padding-left: auto;

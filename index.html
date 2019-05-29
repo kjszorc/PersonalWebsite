@@ -1,7 +1,8 @@
 <html>
   <head>
+    <title>Krystian's Portfolio</title>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="path/to/pts.js"></script>
+    <!-- <script type="text/javascript" src="path/to/pts.js"></script> -->
     <script src="main.js"></script>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -44,13 +45,13 @@
           <div class="section-header">Portfolio</div>
           <div class="portfolio-display">
             <ul>
-              <li class="myBtn" on-click="openModal">
+              <li id="myBtn" on-click="openModal">
                 <figure>
                     <img src="img/WorldOfHyattLoyaltyProgram.png">
                 </figure>
-                <div class="portfolio-name">
+                <button class="portfolio-name">
                     Hyatt
-                </div>
+                </button>
               </li>
               <li>
                 <figure>
@@ -59,7 +60,6 @@
                 <div class="portfolio-name">
                   Levinson
                 </div>
-                
               </li>
               <li>
                 <figure>
@@ -96,8 +96,14 @@
         <div id="Contact" class="row contact-tall">
           <div class="section-header">Contacts</div>
           <div class="content-contact content-center">
-            Like what you see? Let's get in touch!
+              <form class="">
+                  <input placeholder="Name" type="text" required/>
+                  <input placeholder="Enter Email" type="text" required/>
+                  <textarea placeholder="Your Message" type="text"></textarea>
+      
+                </form>
           </div>
+
         </div>
       </div>
 
@@ -107,7 +113,7 @@
 
     <!-- Modal content -->
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span id="close">&times;</span>
       <p>Some text in the Modal..</p>
       <p>Some text in the Modal..</p>
       <p>Some text in the Modal..</p>
