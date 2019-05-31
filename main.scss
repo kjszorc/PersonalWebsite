@@ -95,6 +95,7 @@ nav {
                     filter: grayscale(0) !important;
                 }
             }
+            
 
             // &:not(:hover) li {
             //     opacity: 1 !important;
@@ -136,6 +137,7 @@ nav {
 
                 .portfolio-name {
                     font-size: 22px;
+                    margin: auto;
                     text-align: center;
                 }
             }
@@ -143,6 +145,16 @@ nav {
     }
 }
 
+form {
+    width: 400px;
+
+    .form-control {
+        margin-bottom: 16px;
+    }
+}
+.contact-tall {
+    height: 500px;
+}
 
 /* The Modal (background) */
 .modal {
@@ -163,7 +175,7 @@ nav {
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 2px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 60%; /* Could be more or less, depending on screen size */
   }
   
 }
@@ -178,9 +190,7 @@ nav {
     margin: auto;
 }
 
-.contact-tall {
-    height: 300px;
-}
+
 
 
 div.animation {

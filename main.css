@@ -107,7 +107,19 @@ nav a {
 }
 #Portfolio .portfolio-display ul li .portfolio-name {
   font-size: 22px;
+  margin: auto;
   text-align: center;
+}
+
+form {
+  width: 400px;
+}
+form .form-control {
+  margin-bottom: 16px;
+}
+
+.contact-tall {
+  height: 500px;
 }
 
 /* The Modal (background) */
@@ -138,7 +150,7 @@ nav a {
   /* 15% from the top and centered */
   padding: 20px;
   border: 2px solid #888;
-  width: 80%;
+  width: 60%;
   /* Could be more or less, depending on screen size */
 }
 
@@ -148,10 +160,6 @@ nav a {
   text-align: center;
   vertical-align: center;
   margin: auto;
-}
-
-.contact-tall {
-  height: 300px;
 }
 
 div.animation {
