@@ -2,6 +2,23 @@ body {
   background-color: powderblue;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 25px;
+  z-index: 100;
+  background-color: dimgray;
+  color: black;
+}
+nav .navbar-brand {
+  color: black;
+}
+nav .navbar-brand:hover {
+  cursor: pointer;
+}
+
 .home-body {
   position: relative;
 }
@@ -36,19 +53,6 @@ body {
   color: darkorchid;
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  background-color: dimgray;
-  color: black;
-}
-nav a {
-  color: black;
-}
-
 .section-header {
   font-size: 28px;
   margin: auto;
@@ -58,8 +62,7 @@ nav a {
 .about-tall {
   height: 400px;
 }
-
-.content-about {
+.about-tall .content-about {
   margin: 20px;
   padding: 20px;
 }
@@ -111,15 +114,17 @@ nav a {
   text-align: center;
 }
 
-form {
+.contact-tall .content-contact {
+  margin: 20px;
+  padding: 20px;
+  width: 100%;
+}
+.contact-tall form {
   width: 400px;
+  margin: auto;
 }
-form .form-control {
+.contact-tall form .form-control {
   margin-bottom: 16px;
-}
-
-.contact-tall {
-  height: 500px;
 }
 
 /* The Modal (background) */
@@ -158,8 +163,6 @@ form .form-control {
   /* padding-left: auto;
   padding-right: auto; */
   text-align: center;
-  vertical-align: center;
-  margin: auto;
 }
 
 div.animation {

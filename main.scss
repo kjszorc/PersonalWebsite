@@ -6,6 +6,26 @@ $color-white: #FFFFFF;
 $color-lightgray: #f6f6f6;
 // $color-gray: #282828;
 
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 25px;
+    z-index: 100;
+    background-color: rgb(105, 105, 105);
+    color: black;
+    .navbar-brand {
+        color: black;
+        
+        &:hover {
+          cursor: pointer;
+
+        }
+    }
+}
+
+
 .home-body {
     position: relative;
     figure {
@@ -47,19 +67,6 @@ $color-lightgray: #f6f6f6;
 
 }
 
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    background-color: rgb(105, 105, 105);
-    color: black;
-    a {
-        color: black;
-    }
-}
-
 .section-header {
     font-size: 28px;
     margin: auto;
@@ -68,12 +75,13 @@ nav {
 
 .about-tall {
     height: 400px; // temp delete later
+
+    .content-about {
+        margin: 20px;
+        padding: 20px;
+    }
 }
 
-.content-about {
-    margin: 20px;
-    padding: 20px;
-}
 
 #Portfolio {
     padding: 10px;
@@ -145,15 +153,24 @@ nav {
     }
 }
 
-form {
-    width: 400px;
 
-    .form-control {
-        margin-bottom: 16px;
-    }
-}
 .contact-tall {
-    height: 500px;
+    // height: 500px;
+
+    .content-contact {
+        margin: 20px;
+        padding: 20px;
+        width: 100%;
+    }
+
+    form {
+        width: 400px;
+        margin: auto;
+        
+        .form-control {
+            margin-bottom: 16px;
+        }
+    }
 }
 
 /* The Modal (background) */
@@ -186,8 +203,8 @@ form {
     /* padding-left: auto;
     padding-right: auto; */
     text-align: center;
-    vertical-align: center;
-    margin: auto;
+    // vertical-align: center;
+    // margin: auto;
 }
 
 
