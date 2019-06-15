@@ -207,6 +207,11 @@ nav {
     // margin: auto;
 }
 
+.container {
+    &:nth-child(2n+3) {
+        background-color: #888;
+    }
+}
 
 
 
