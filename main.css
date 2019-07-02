@@ -1,6 +1,9 @@
 body {
   background-color: powderblue;
 }
+body figure {
+  margin: 0;
+}
 
 nav {
   position: fixed;
@@ -10,13 +13,38 @@ nav {
   padding-left: 25px;
   z-index: 100;
   background-color: dimgray;
-  color: black;
+  color: #000;
 }
 nav .navbar-brand {
-  color: black;
+  color: #000;
 }
 nav .navbar-brand:hover {
   cursor: pointer;
+}
+
+button, .btn {
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #FFFFFF;
+  background-color: lightpink;
+  cursor: pointer;
+}
+button:hover, .btn:hover {
+  animation: btn-hover 0.5s ease both;
+}
+@keyframes btn-hover {
+  100% {
+    border-color: lightpink;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .home-body {
@@ -53,12 +81,6 @@ nav .navbar-brand:hover {
   color: darkorchid;
 }
 
-.section-header {
-  font-size: 28px;
-  margin: auto;
-  border-bottom: 2px solid black;
-}
-
 .about-tall {
   height: 400px;
 }
@@ -69,38 +91,33 @@ nav .navbar-brand:hover {
 
 #Portfolio {
   padding: 10px;
-  background-color: #f6f6f6;
 }
 #Portfolio .portfolio-display {
   width: 100%;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 #Portfolio .portfolio-display ul {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   list-style: none;
-}
-#Portfolio .portfolio-display ul:not(:hover) li {
-  opacity: 1 !important;
-}
-#Portfolio .portfolio-display ul:not(:hover) li img {
-  filter: grayscale(0) !important;
+  padding: 10px;
 }
 #Portfolio .portfolio-display ul li {
   display: inline;
-  padding: 10px;
+  margin: 10px;
+  position: relative;
 }
 #Portfolio .portfolio-display ul li:hover {
-  opacity: 1;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  cursor: pointer;
 }
-#Portfolio .portfolio-display ul li:not(:hover) {
-  opacity: 0.4;
-}
-#Portfolio .portfolio-display ul li:not(:hover) img {
+#Portfolio .portfolio-display ul li:hover img {
   filter: grayscale(50%);
+  animation: blur 1s ease both;
+}
+#Portfolio .portfolio-display ul li:hover .portfolio-name, #Portfolio .portfolio-display ul li:hover .preview {
+  display: inline;
+  animation: show-button 1s ease both;
 }
 #Portfolio .portfolio-display ul li figure img {
   width: 300px;
@@ -109,14 +126,44 @@ nav .navbar-brand:hover {
   max-height: 300px;
 }
 #Portfolio .portfolio-display ul li .portfolio-name {
+  display: none;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  margin: auto;
+  text-align: center;
+}
+#Portfolio .portfolio-display ul li .preview {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 22px;
   margin: auto;
   text-align: center;
 }
 
+@keyframes blur {
+  0% {
+    filter: blur(0px);
+  }
+  100% {
+    filter: blur(3px);
+  }
+}
+@keyframes show-button {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .contact-tall .content-contact {
-  margin: 20px;
-  padding: 20px;
+  margin: 20px 20px 0;
+  padding: 20px 0;
   width: 100%;
 }
 .contact-tall form {
@@ -145,18 +192,47 @@ nav .navbar-brand:hover {
   /* Enable scroll if needed */
   background-color: black;
   /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   /* Black w/ opacity */
   /* Modal Content/Box */
 }
 .modal .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 5% auto;
   /* 15% from the top and centered */
   padding: 20px;
   border: 2px solid #888;
   width: 60%;
   /* Could be more or less, depending on screen size */
+}
+.modal .modal-content figure {
+  margin: -20px;
+  padding-bottom: 30px;
+}
+.modal .modal-content figure img {
+  max-height: 300px;
+}
+.modal .modal-content .title {
+  font-size: 20px;
+}
+.modal .modal-content .tag {
+  color: #CCC;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #CCC;
+}
+.modal .modal-content .description {
+  padding: 20px 0;
+}
+.modal .modal-content .row {
+  margin: 0px;
+}
+.modal .modal-content .row .link {
+  color: #000;
+}
+.modal .modal-content .row .close {
+  vertical-align: middle;
+  margin-left: auto;
+  font-size: 40px;
 }
 
 .content-center {
@@ -165,8 +241,35 @@ nav .navbar-brand:hover {
   text-align: center;
 }
 
-.container:nth-child(2n+3) {
-  background-color: #888;
+.section {
+  width: 100%;
+  align-items: center;
+}
+.section:first-child {
+  margin-top: -20px;
+}
+.section:nth-child(2n+3) {
+  background-color: #CCC;
+}
+.section .section-header {
+  font-size: 28px;
+  padding-top: 30px;
+  text-align: center;
+  animation: slide-in-right 1s ease both;
+}
+.section .section-header .section-title {
+  display: inline;
+  border-bottom: 2px solid #000;
+}
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(400px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 div.animation {

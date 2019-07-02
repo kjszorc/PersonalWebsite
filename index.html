@@ -30,9 +30,13 @@
       </div> 
     </div>
 
-    <div class="container">
-      <div id="About" class="row about-tall">
-        <div class="section-header">About</div>
+    <div class="section">
+      <div id="About" class="container about-tall">
+          <div class="section-header">
+              <h2 class="section-title">
+                About
+              </h2>
+            </div>
         <div class="content-about content-center">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
@@ -40,68 +44,87 @@
       </div>
     </div>
 
-    <div class="container">
-        <div id="Portfolio" class="row tall">
-          <div class="section-header">Portfolio</div>
+    <div class="section">
+        <div id="Portfolio" class="container tall">
+          <div class="section-header">
+            <h2 class="section-title">
+              Portfolio
+            </h2>
+          </div>
           <div class="portfolio-display">
+            <div>
+                sf
+            </div>
             <ul>
               <li id="myBtn" on-click="openModal">
                 <figure>
                     <img src="img/WorldOfHyattLoyaltyProgram.png">
                 </figure>
-                <button class="portfolio-name">
+                <div class="preview">
+                  <h3>
                     Hyatt
+                  </h3>
+                  <span>
+                    VueJS, Java
+                  </span>
+                </div>
+                <button class="portfolio-name">
+                    Learn More
                 </button>
               </li>
               <li>
                 <figure>
                     <img src="img/levinson-home.jpg">
                 </figure>
-                <div class="portfolio-name">
+                <button class="portfolio-name">
                   Levinson
-                </div>
+                </button>
               </li>
               <li>
                 <figure>
                     <img src="img/shipbob-home.jpg">
                 </figure>
-                <div class="portfolio-name">
+                <button class="portfolio-name">
                   Shipbob
-                </div>
+                </button>
                 
               </li>
               <li>
                 <figure>
                     <img src="img/shipbob-home.jpg">
                 </figure>
-                <div class="portfolio-name">
+                <button class="portfolio-name">
                   Geneca
-                </div>
+                </button>
                 
               </li>
               <li>
                 <figure>
                     <img src="img/cmt-home.png">
                 </figure>
-                <div class="portfolio-name">
+                <button class="portfolio-name">
                   xCelor/CMT
-                </div>              
+                </button>              
               </li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div class="container">
-        <div id="Contact" class="row contact-tall">
-          <div class="section-header">Contact</div>
+      <div class="section">
+        <div id="Contact" class="container contact-tall">
+          <div class="section-header">
+            <h2 class="section-title">
+                Contact
+            </h2>
+          </div>
           <div class="content-contact content-center">
             <form class="">
               <input class="form-control" placeholder="Name" type="text" required/>
               <input class="form-control" placeholder="Enter Email" type="email" required/>
               <input class="form-control" placeholder="Subject" type="text" required/>
               <textarea class="form-control" placeholder="Your Message" type="text" required></textarea>
-              <button class="btn btn-primary">Submit</button>
+              <button class="">Submit</button>
             </form>
           </div>
 
@@ -114,11 +137,28 @@
 
     <!-- Modal content -->
     <div class="modal-content">
-      <span id="close">&times;</span>
-      <p>Worked on the World of Hyatt team to help their web app achieve new visuals and design </p>
+      <figure>
+        <img src="img/shipbob-home.jpg">
+      </figure>
+      <div class="title">
+        World of Hyatt
+      </div>
+      <div class="tag">
+        VueJS and Java with AEM
+      </div>
+      <p class="description">Worked on the World of Hyatt team to help their web app 
+        achieve new visuals and design. Re-designed the My Account page to provide 
+        a leaner page while adding functionality.
+      </p>
+
+      <div class="row">
+        <a class="btn link" href="https://www.google.com">
+          Visit Site
+        </a>
+        <span id="close" class="close">&times;</span>
+      </div>
+
     </div>
   </div>
-
-
   </body>
 </html>
