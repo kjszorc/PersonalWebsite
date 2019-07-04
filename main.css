@@ -12,11 +12,11 @@ nav {
   width: 100%;
   padding-left: 25px;
   z-index: 100;
-  background-color: dimgray;
-  color: #000;
+  background-color: #1B242F;
+  border-bottom: 2px solid #04C2C9;
 }
 nav .navbar-brand {
-  color: #000;
+  color: #FFFFFF;
 }
 nav .navbar-brand:hover {
   cursor: pointer;
@@ -74,7 +74,7 @@ img {
   transform: translate(-50%, -50%);
   padding: 30px;
   background: rgba(1, 1, 1, 0.85);
-  border: 3px solid white;
+  border: 3px solid #04C2C9;
   color: white;
 }
 .home-body .header-content strong {
@@ -112,10 +112,9 @@ img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #Portfolio .portfolio-display ul li:hover img {
-  filter: grayscale(50%);
-  animation: blur 1s ease both;
+  animation: whiten-img 1s ease both;
 }
-#Portfolio .portfolio-display ul li:hover .portfolio-name, #Portfolio .portfolio-display ul li:hover .preview {
+#Portfolio .portfolio-display ul li:hover .preview {
   display: inline;
   animation: show-button 1s ease both;
 }
@@ -125,21 +124,18 @@ img {
   max-width: 300px;
   max-height: 300px;
 }
-#Portfolio .portfolio-display ul li .portfolio-name {
-  display: none;
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 22px;
-  margin: auto;
-  text-align: center;
-}
 #Portfolio .portfolio-display ul li .preview {
   position: absolute;
-  top: 25%;
+  height: 100%;
+  top: 10%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
+  font-size: 22px;
+  text-align: center;
+  color: #04C2C9;
+}
+#Portfolio .portfolio-display ul li .preview .learn-more {
+  border-color: #04C2C9;
   font-size: 22px;
   margin: auto;
   text-align: center;
@@ -159,6 +155,14 @@ img {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes whiten-img {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
   }
 }
 .contact-tall .content-contact {
@@ -272,6 +276,21 @@ img {
   }
 }
 
+footer {
+  background-color: #1B242F;
+  color: #FFFFFF;
+}
+footer .social {
+  float: right;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+}
+footer .social .social-icons {
+  width: 40px;
+  height: 40px;
+}
+
 div.animation {
   width: 100px;
   height: 100px;
@@ -281,37 +300,8 @@ div.animation {
   /* Safari 4.0 - 8.0 */
   -webkit-animation-duration: 4s;
   /* Safari 4.0 - 8.0 */
-  animation-name: example;
-  animation-duration: 4s;
 }
 
-@keyframes example {
-  0% {
-    background-color: red;
-    left: 0px;
-    top: 0px;
-  }
-  25% {
-    background-color: yellow;
-    left: 200px;
-    top: 0px;
-  }
-  50% {
-    background-color: blue;
-    left: 200px;
-    top: 200px;
-  }
-  75% {
-    background-color: green;
-    left: 0px;
-    top: 200px;
-  }
-  100% {
-    background-color: red;
-    left: 0px;
-    top: 0px;
-  }
-}
 .typewriter h1 {
   text-align: left;
   color: #fff;

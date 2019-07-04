@@ -6,10 +6,11 @@ body {
     }
 }
 
+$color-darkblue: #1B242F;
 $color-white: #FFFFFF;
 $color-lightgray: #CCC;
 $color-black: #000;
-
+$color-lightblue: #04C2C9;
 
 
 nav {
@@ -19,10 +20,10 @@ nav {
     width: 100%;
     padding-left: 25px;
     z-index: 100;
-    background-color: rgb(105, 105, 105);
-    color: $color-black;
+    background-color: $color-darkblue;
+    border-bottom: 2px solid $color-lightblue; 
     .navbar-brand {
-        color: $color-black;
+        color: $color-white;
         
         &:hover {
           cursor: pointer;
@@ -92,7 +93,7 @@ img {
         transform: translate(-50%, -50%);
         padding: 30px;
         background: rgba(1,1, 1, 0.85);
-        border: 3px solid white;
+        border: 3px solid $color-lightblue;
         color: white;
 
         strong {
@@ -136,10 +137,11 @@ img {
                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
                     img {
-                        filter: grayscale(50%);
-                        animation: blur 1s ease both;
+                        // filter: grayscale(50%);
+                        // animation: blur 1s ease both;
+                        animation: whiten-img 1s ease both;
                     }
-                    .portfolio-name, .preview {
+                    .preview {
                         display: inline;
                         animation: show-button 1s ease both;
                     }
@@ -151,26 +153,30 @@ img {
                     max-height: 300px;
                 }
 
-                .portfolio-name {
-                    display: none;
-                    position: absolute;
-                    top: 80%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    font-size: 22px;
-                    margin: auto;
-                    text-align: center;
-                }
-
                 .preview {
                     // display: none;
                     position: absolute;
-                    top: 25%;
+                    height: 100%;
+                    top: 10%;
                     left: 50%;
-                    transform: translate(-50%, -50%);
+                    transform: translate(-50%, 0%);
                     font-size: 22px;
-                    margin: auto;
+                    // margin: auto;
                     text-align: center;
+                    color: $color-lightblue;
+
+
+                    .learn-more {
+                        // position: absolute;
+                        // top: 80%;
+                        // left: 50%;
+                        // transform: translate(-50%, -50%);
+                        // margin-top: 16px;
+                        border-color: $color-lightblue;
+                        font-size: 22px;
+                        margin: auto;
+                        text-align: center;
+                    }
                 }
             }
         }
@@ -184,6 +190,10 @@ img {
 @keyframes show-button {
     0%   { opacity: 0; }
     100% { opacity: 1; }
+}
+@keyframes whiten-img {
+    0%   { opacity: 1; }
+    100% { opacity: 0.1; }
 }
 
 .contact-tall {
@@ -309,6 +319,22 @@ img {
 }
 
 
+footer {
+    background-color: $color-darkblue;
+    color: $color-white;
+
+    .social {
+        float: right;
+        list-style: none;
+        display: flex;
+        flex-flow: row wrap;
+    
+        .social-icons {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
 
 div.animation {
 width: 100px;
@@ -317,16 +343,6 @@ background-color: red;
 position: relative;
 -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
 -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-animation-name: example;
-animation-duration: 4s;
-}
-
-@keyframes example {
-0%   {background-color:red; left:0px; top:0px;}
-25%  {background-color:yellow; left:200px; top:0px;}
-50%  {background-color:blue; left:200px; top:200px;}
-75%  {background-color:green; left:0px; top:200px;}
-100% {background-color:red; left:0px; top:0px;}
 }
 
 .typewriter h1 {
