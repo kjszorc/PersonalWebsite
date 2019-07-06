@@ -1,5 +1,5 @@
 body {
-  background-color: powderblue;
+  background-color: #1B242F !important;
 }
 body figure {
   margin: 0;
@@ -25,18 +25,23 @@ nav .navbar-brand:hover {
 button, .btn {
   width: 200px;
   padding: 10px;
-  border-radius: 10px;
-  border: 2px solid #FFFFFF;
+  border-radius: 10px !important;
+  border: 2px solid lightpink;
   background-color: lightpink;
+  color: #FFFFFF;
   cursor: pointer;
 }
 button:hover, .btn:hover {
   animation: btn-hover 0.5s ease both;
 }
 @keyframes btn-hover {
+  0% {
+    color: #FFFFFF;
+  }
   100% {
-    border-color: lightpink;
     background-color: #FFFFFF;
+    border: 2px solid lightpink;
+    color: lightpink;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 }
@@ -125,6 +130,7 @@ img {
   max-height: 300px;
 }
 #Portfolio .portfolio-display ul li .preview {
+  display: none;
   position: absolute;
   height: 100%;
   top: 10%;
@@ -132,7 +138,7 @@ img {
   transform: translate(-50%, 0%);
   font-size: 22px;
   text-align: center;
-  color: #04C2C9;
+  color: #FFFFFF;
 }
 #Portfolio .portfolio-display ul li .preview .learn-more {
   border-color: #04C2C9;
@@ -166,7 +172,6 @@ img {
   }
 }
 .contact-tall .content-contact {
-  margin: 20px 20px 0;
   padding: 20px 0;
   width: 100%;
 }
@@ -174,8 +179,11 @@ img {
   width: 400px;
   margin: auto;
 }
-.contact-tall form .form-control {
-  margin-bottom: 16px;
+.contact-tall form fieldset input, .contact-tall form fieldset textarea {
+  display: block;
+  width: 100%;
+  margin: 5px;
+  border: 1px solid black;
 }
 
 /* The Modal (background) */
@@ -230,9 +238,6 @@ img {
 .modal .modal-content .row {
   margin: 0px;
 }
-.modal .modal-content .row .link {
-  color: #000;
-}
 .modal .modal-content .row .close {
   vertical-align: middle;
   margin-left: auto;
@@ -246,6 +251,7 @@ img {
 }
 
 .section {
+  background-color: #04C2C9;
   width: 100%;
   align-items: center;
 }

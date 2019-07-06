@@ -1,10 +1,4 @@
-body {
-    background-color: powderblue;
 
-    figure {
-        margin: 0;
-    }
-}
 
 $color-darkblue: #1B242F;
 $color-white: #FFFFFF;
@@ -12,7 +6,14 @@ $color-lightgray: #CCC;
 $color-black: #000;
 $color-lightblue: #04C2C9;
 
+body {
+    // background-color: darkblue;
+    background-color: $color-darkblue !important;
 
+    figure {
+        margin: 0;
+    }
+}
 nav {
     position: fixed;
     top: 0;
@@ -35,9 +36,10 @@ nav {
 button, .btn {
     width: 200px;
     padding: 10px;
-    border-radius: 10px;
-    border: 2px solid $color-white;
+    border-radius: 10px !important;
+    border: 2px solid lightpink;
     background-color: lightpink;
+    color: $color-white;
     cursor: pointer;
 
     &:hover {
@@ -45,10 +47,11 @@ button, .btn {
     }
 
     @keyframes btn-hover {
-        0% { }
+        0% { color: $color-white; }
         100% { 
-            border-color: lightpink;
             background-color: $color-white;
+            border: 2px solid lightpink;
+            color: lightpink;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
     }
@@ -115,6 +118,8 @@ img {
 
 #Portfolio {
     padding: 10px;
+
+    
     // background-color: $color-lightgray;
 
     .portfolio-display {
@@ -154,7 +159,7 @@ img {
                 }
 
                 .preview {
-                    // display: none;
+                    display: none;
                     position: absolute;
                     height: 100%;
                     top: 10%;
@@ -163,7 +168,7 @@ img {
                     font-size: 22px;
                     // margin: auto;
                     text-align: center;
-                    color: $color-lightblue;
+                    color: $color-white;
 
 
                     .learn-more {
@@ -198,7 +203,6 @@ img {
 
 .contact-tall {
     .content-contact {
-        margin: 20px 20px 0;
         padding: 20px 0;
         width: 100%;
     }
@@ -207,8 +211,13 @@ img {
         width: 400px;
         margin: auto;
         
-        .form-control {
-            margin-bottom: 16px;
+        fieldset {
+            input, textarea {
+                display: block;
+                width: 100%;
+                margin: 5px;
+                border: 1px solid black;
+            }
         }
     }
 }
@@ -258,9 +267,6 @@ img {
         }
         .row {
             margin: 0px;
-            .link {
-                color: $color-black;
-            }
     
             .close {
                 vertical-align: middle;
@@ -285,6 +291,7 @@ img {
         margin-top: -20px;
     }
 
+    background-color: $color-lightblue;
     &:nth-child(2n+3) {
         background-color: $color-lightgray;
     }
