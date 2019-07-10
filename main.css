@@ -10,16 +10,18 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  padding-left: 25px;
+  padding-left: 30px;
   z-index: 100;
   background-color: #1B242F;
   border-bottom: 2px solid #04C2C9;
 }
 nav .navbar-brand {
   color: #FFFFFF;
+  padding-right: 30px;
 }
 nav .navbar-brand:hover {
   cursor: pointer;
+  color: lightpink;
 }
 
 button, .btn {
@@ -30,20 +32,14 @@ button, .btn {
   background-color: lightpink;
   color: #FFFFFF;
   cursor: pointer;
+  transition: all 0.8s ease both;
 }
 button:hover, .btn:hover {
-  animation: btn-hover 0.5s ease both;
-}
-@keyframes btn-hover {
-  0% {
-    color: #FFFFFF;
-  }
-  100% {
-    background-color: #FFFFFF;
-    border: 2px solid lightpink;
-    color: lightpink;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
+  transition: all 0.8s ease both;
+  background-color: #FFFFFF;
+  border: 2px solid lightpink;
+  color: lightpink;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 img {
@@ -112,25 +108,30 @@ img {
   display: inline;
   margin: 10px;
   position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #Portfolio .portfolio-display ul li:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #Portfolio .portfolio-display ul li:hover img {
-  animation: whiten-img 1s ease both;
+  transition: all 1.2s;
+  opacity: 0.2;
+  filter: blur(3px);
 }
 #Portfolio .portfolio-display ul li:hover .preview {
-  display: inline;
-  animation: show-button 1s ease both;
+  transition: all 1.2s;
+  opacity: 1;
 }
 #Portfolio .portfolio-display ul li figure img {
   width: 300px;
   height: 200px;
   max-width: 300px;
   max-height: 300px;
+  transition: all 1.2s;
+  opacity: 1;
+  filter: blur(0px);
 }
 #Portfolio .portfolio-display ul li .preview {
-  display: none;
   position: absolute;
   height: 100%;
   top: 10%;
@@ -138,52 +139,34 @@ img {
   transform: translate(-50%, 0%);
   font-size: 22px;
   text-align: center;
-  color: #FFFFFF;
+  color: #1B242F;
+  transition: all 1.2s;
+  opacity: 0;
 }
 #Portfolio .portfolio-display ul li .preview .learn-more {
   border-color: #04C2C9;
   font-size: 22px;
-  margin: auto;
+  margin: 26 auto auto;
   text-align: center;
 }
 
-@keyframes blur {
-  0% {
-    filter: blur(0px);
-  }
-  100% {
-    filter: blur(3px);
-  }
-}
-@keyframes show-button {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes whiten-img {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.1;
-  }
-}
 .contact-tall .content-contact {
   padding: 20px 0;
   width: 100%;
 }
 .contact-tall form {
   width: 400px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
   margin: auto;
 }
 .contact-tall form fieldset input, .contact-tall form fieldset textarea {
   display: block;
   width: 100%;
-  margin: 5px;
-  border: 1px solid black;
+  margin: 10px 0;
+  border-radius: 10px;
+  padding: 8px;
+  border: 1px solid #CCC;
 }
 
 /* The Modal (background) */
@@ -251,7 +234,8 @@ img {
 }
 
 .section {
-  background-color: #04C2C9;
+  background-image: linear-gradient(to right, rgba(4, 194, 201, 0.16), rgba(228, 247, 20, 0.19));
+  background-color: white;
   width: 100%;
   align-items: center;
 }
@@ -260,6 +244,7 @@ img {
 }
 .section:nth-child(2n+3) {
   background-color: #CCC;
+  background-image: linear-gradient(to right, rgba(96, 247, 20, 0.15), rgba(250, 172, 70, 0.19));
 }
 .section .section-header {
   font-size: 28px;
@@ -295,53 +280,6 @@ footer .social {
 footer .social .social-icons {
   width: 40px;
   height: 40px;
-}
-
-div.animation {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  position: relative;
-  -webkit-animation-name: example;
-  /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 4s;
-  /* Safari 4.0 - 8.0 */
-}
-
-.typewriter h1 {
-  text-align: left;
-  color: #fff;
-  font-family: monospace;
-  overflow: hidden;
-  /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid orange;
-  /* The typwriter cursor */
-  white-space: nowrap;
-  /* Keeps the content on a single line */
-  margin: 0 auto;
-  /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.15em;
-  /* Adjust as needed */
-  animation: typing 3.5s steps(30, end), blink-caret 0.8s step-end infinite;
-}
-
-/* The typing effect */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: orange;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */
