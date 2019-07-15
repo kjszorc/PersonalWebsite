@@ -4,42 +4,48 @@ body {
 body figure {
   margin: 0;
 }
-
-nav {
+body nav {
   position: fixed;
+  opacity: 0.9;
   top: 0;
   left: 0;
   width: 100%;
   padding-left: 30px;
   z-index: 100;
   background-color: #1B242F;
+  border: none;
   border-bottom: 2px solid #04C2C9;
 }
-nav .navbar-brand {
+body nav .navbar-brand {
   color: #FFFFFF;
   padding-right: 30px;
+  transition: color 0.5s;
+  text-transform: uppercase;
 }
-nav .navbar-brand:hover {
+body nav .navbar-brand.active {
+  color: #E31B6D;
+}
+body nav .navbar-brand:hover {
   cursor: pointer;
-  color: lightpink;
 }
 
 button, .btn {
   width: 200px;
   padding: 10px;
+  margin: 10px;
   border-radius: 10px !important;
-  border: 2px solid lightpink;
-  background-color: lightpink;
+  border: 2px solid #E31B6D;
+  background-color: #E31B6D;
   color: #FFFFFF;
-  cursor: pointer;
-  transition: all 0.8s ease both;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 0.6s;
 }
 button:hover, .btn:hover {
-  transition: all 0.8s ease both;
+  width: 205px;
   background-color: #FFFFFF;
-  border: 2px solid lightpink;
-  color: lightpink;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 2px solid #E31B6D;
+  color: #E31B6D;
+  transition: all 0.6s;
 }
 
 img {
@@ -79,15 +85,23 @@ img {
   color: white;
 }
 .home-body .header-content strong {
-  color: darkorchid;
+  color: #E31B6D;
 }
 
 .about-tall {
-  height: 400px;
+  padding-top: 10px;
 }
 .about-tall .content-about {
-  margin: 20px;
   padding: 20px;
+}
+.about-tall .content-about figure img {
+  width: 300px;
+  height: 200px;
+  max-width: 300px;
+  max-height: 300px;
+  transition: all 1.2s;
+  opacity: 1;
+  filter: blur(0px);
 }
 
 #Portfolio {
@@ -144,7 +158,7 @@ img {
   opacity: 0;
 }
 #Portfolio .portfolio-display ul li .preview .learn-more {
-  border-color: #04C2C9;
+  border-color: #E31B6D;
   font-size: 22px;
   margin: 26 auto auto;
   text-align: center;
@@ -154,8 +168,12 @@ img {
   padding: 20px 0;
   width: 100%;
 }
+.contact-tall .sub-text {
+  text-align: center;
+  padding-top: 24px;
+}
 .contact-tall form {
-  width: 400px;
+  max-width: 400px;
   padding-bottom: 10px;
   margin-bottom: 10px;
   margin: auto;
@@ -163,9 +181,10 @@ img {
 .contact-tall form fieldset input, .contact-tall form fieldset textarea {
   display: block;
   width: 100%;
-  margin: 10px 0;
+  margin: 20px 0;
   border-radius: 10px;
   padding: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 1px solid #CCC;
 }
 
@@ -225,6 +244,16 @@ img {
   vertical-align: middle;
   margin-left: auto;
   font-size: 40px;
+  transition: all 1s;
+}
+.modal .modal-content .row .close:hover {
+  transition: all 1s;
+  font-size: 50px;
+  transform: rotate(90deg);
+}
+
+.svgcolor-light {
+  background-image: linear-gradient(to right, rgba(4, 194, 201, 0.16), rgba(228, 247, 20, 0.19));
 }
 
 .content-center {
@@ -236,7 +265,7 @@ img {
 .section {
   background-image: linear-gradient(to right, rgba(4, 194, 201, 0.16), rgba(228, 247, 20, 0.19));
   background-color: white;
-  width: 100%;
+  width: 100vw;
   align-items: center;
 }
 .section:first-child {
@@ -251,9 +280,21 @@ img {
   padding-top: 30px;
   text-align: center;
   animation: slide-in-right 1s ease both;
+  position: relative;
 }
 .section .section-header .section-title {
   display: inline;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.section .section-header .section-title::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 100%;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
   border-bottom: 2px solid #000;
 }
 @keyframes slide-in-right {
@@ -271,6 +312,11 @@ footer {
   background-color: #1B242F;
   color: #FFFFFF;
 }
+footer .footer-copyright {
+  margin: auto;
+  font-size: 14px;
+  padding-left: 30px;
+}
 footer .social {
   float: right;
   list-style: none;
@@ -278,7 +324,7 @@ footer .social {
   flex-flow: row wrap;
 }
 footer .social .social-icons {
-  width: 40px;
+  width: 45px;
   height: 40px;
 }
 

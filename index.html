@@ -10,10 +10,10 @@
   </head>
   <body>
     <nav class="">
-      <a class="navbar-brand" href="#Home">Home</a>
-      <a class="navbar-brand" href="#About">About</a>
-      <a class="navbar-brand" href="#Portfolio">Portfolio</a>
-      <a class="navbar-brand" href="#Contact">Contact</a>
+      <div class="navbar-brand" dest="Home">Home</div>
+      <div class="navbar-brand" dest="About">About</div>
+      <div class="navbar-brand" dest="Portfolio">Portfolio</div>
+      <div class="navbar-brand" dest="Contact">Contact</div>
     </nav>
 
     <div id="Home" class="home-body">
@@ -34,15 +34,21 @@
     <div class="section">
       <div id="About" class="container about-tall">
           <div class="section-header">
-              <h2 class="section-title">
+              <h2 class="waypoint section-title">
                 About
               </h2>
             </div>
-        <div class="content-about content-center">
-          <p>
-            Test
-          </p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="content-about content-center row">
+          <figure class="col-xl-6">
+            <img src="img/shipbob-home.jpg">
+          </figure>
+          <div class="col-xl-6">
+              <p>
+                Test
+              </p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          
         </div>
 
       </div>
@@ -68,7 +74,7 @@
                   <span>
                     VueJS, Java
                   </span>
-                  <button class="learn-more">
+                  <button class="btn learn-more">
                     Learn More
                   </button>
                 </div>
@@ -118,16 +124,21 @@
             </ul>
           </div>
         </div>
+
       </div>
 
       <div class="section">
+          <!-- <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
+            <path d="M0 0 L50 100 L100 0 Z" ></path>
+          </svg> -->
         <div id="Contact" class="container contact-tall">
+
           <div class="section-header">
             <h2 class="section-title">
                 Contact
             </h2>
           </div>
-          <div>
+          <div class="sub-text">
             Like what you see or have a question?
           </div>
           <div class="content-contact content-center">
@@ -135,10 +146,10 @@
                 <fieldset id="fs-frm-inputs">
                   <input type="text" name="name" id="full-name" placeholder="Name" required="">
                   <input type="email" name="_replyto" id="email-address" placeholder="Email" required="">
-                  <textarea rows="6" name="message" id="message" placeholder="Your message" required=""></textarea>
+                  <textarea rows="8" name="message" id="message" placeholder="Your message" required=""></textarea>
                   <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
                 </fieldset>
-                <input class="btn" type="submit" value="Submit">
+                <input class="btn" type="submit" value="Submit"></br>
               </form>
           </div>
         </div>
@@ -180,12 +191,17 @@
 <footer class="page-footer font-small blue">
   <div class="row py-2 px-3">
     <!-- Copyright -->
-    <div class="footer-copyright col-xl-6"> 2019 Copyright:
+    <div class="footer-copyright col-xl-6"> © 2019
       <a href="https://www.krystianszorc.com"> Krystian Szorc</a>
     </div>
     <!-- Copyright -->
     <div class="col-xl-6">
       <ul class="social">
+          <li class="social-icons">
+              <a class="nav-link p-2" href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="fa fa-linkedin-square" style="font-size:36px"></i>
+              </a>
+          </li>
         <li class="social-icons">
             <a class="nav-link p-2" href="https://github.com/kjszorc" target="_blank" rel="noopener" aria-label="GitHub">
               <i class="fa fa-github-square" style="font-size:36px"></i>
@@ -193,10 +209,15 @@
             </a>
         </li>
         <li class="social-icons">
-            <a class="nav-link p-2" href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener" aria-label="GitHub">
-              <i class="fa fa-linkedin-square" style="font-size:36px"></i>
+            <a class="nav-link p-2" href="#" target="_blank" rel="noopener" aria-label="GitHub">
+              <i class="fa fa-stack-overflow" style="font-size:36px"></i>
             </a>
         </li>
+        <!-- <li class="social-icons">
+            <a class="nav-link p-2" href="#" target="_blank" rel="noopener" aria-label="GitHub">
+              <i class="fa fa-file" style="font-size:36px"></i>
+            </a>
+        </li> -->
       </ul>
     </div>
   </div>

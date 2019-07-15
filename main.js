@@ -28,21 +28,93 @@ $(document).ready(function() {
     }
   }
 
-  // CONTACT FORM
-  $('#contact-form').submit(function(e) {
-    e.preventDefault();
+  var navPos = $('nav').position().top;
+  var lastPos = 0;
+  var lockTimer
 
-      $.ajax({
-          url: "https://formspree.io/kjszorc@yahoo.com",
-          method: "POST",
-          data: { message: $('form').serialize() },
-          dataType: "json"
-      }).done(function(response) {
-          window.alert('yay this may have worked!');
-          // $('#success').addClass('expand');
-          // $('#contact-form').find("input[type=text], input[type=email], textarea").val("");
-      });
+  function handleScroll() {
+    var pos = $(window).scrollTop();
+    var pos2 = pos + (window.innerHeight * .5);
+    var scrollBottom = pos + $(window).height();
+
+    // if (true) {
+    //   if (pos >= navPos + $('nav').height() && lastPos < pos) {
+    //     $('nav').addClass('fixed');
+    //   }
+    //   if (pos < navPos && lastPos > pos) {
+    //     $('nav').removeClass('fixed');
+    //   }
+    //   lastPos = pos;
+    // }
+
+    // Link Highlighting
+    if (pos2 > $('#Home').offset().top || pos2 <= 10 ) { highlightLink('Home');  }
+    if (pos2 > $('#About').offset().top)               { highlightLink('About'); }
+    if (pos2 > $('#Portfolio').offset().top)           { highlightLink('Portfolio'); }
+    if (pos2 > $('#Contact').offset().top )            { highlightLink('Contact');   }
+
+    // Prevent Hover on Scroll
+    clearTimeout(lockTimer);
+    if(!$('body').hasClass('disable-hover')) {
+      $('body').addClass('disable-hover')
+    }
+
+    lockTimer = setTimeout(function(){
+      $('body').removeClass('disable-hover')
+    }, 500);
+  };
+  $(window).on('scroll', handleScroll);
+  handleScroll(); // execute once on page load
+
+  function highlightLink(anchor) {
+    $('nav .active').removeClass('active');
+    $("nav").find('[dest="' + anchor + '"]').addClass('active');
+  }
+
+  // EVENT HANDLERS
+  $('.navbar-brand').click(function() {
+    // debugger;
+    var anchor = $(this).attr("dest");
+    // $('.link-wrap').removeClass('visible');
+
+    $('nav div').removeClass('active');
+    $("nav").find('[dest="'+ anchor +'"]').addClass('active');
+
+    $('html, body').animate({
+      scrollTop: $('#' + anchor).offset().top,
+      behavior: 'smooth',
+    }, 500);
   });
+
+  // SCROLL ANIMATIONS
+  function onScrollInit( items, elemTrigger ) {
+    // debugger;
+    // var offset = $(window).height() / 1.6
+    // items.each( function() {
+    //   var elem = $(this),
+    //       animationClass = elem.attr('data-animation'),
+    //       animationDelay = elem.attr('data-delay');
+
+    //       elem.css({
+    //         '-webkit-animation-delay':  animationDelay,
+    //         '-moz-animation-delay':     animationDelay,
+    //         'animation-delay':          animationDelay
+    //       });
+
+    //       var trigger = (elemTrigger) ? trigger : elem;
+
+    //       trigger.waypoint(function() {
+    //         elem.addClass('animated').addClass(animationClass);
+    //         if (elem.get(0).id === 'gallery') mixClear(); //OPTIONAL
+    //         },{
+    //             triggerOnce: true,
+    //             offset: offset
+    //       });
+    // });
+  }
+
+  setTimeout(function() { onScrollInit($('.waypoint')) }, 10);
+
 });
 
 
