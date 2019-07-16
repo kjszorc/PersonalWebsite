@@ -244,10 +244,10 @@ img {
   vertical-align: middle;
   margin-left: auto;
   font-size: 40px;
-  transition: all 1s;
+  transition: all 0.8s;
 }
 .modal .modal-content .row .close:hover {
-  transition: all 1s;
+  transition: all 0.8s;
   font-size: 50px;
   transform: rotate(90deg);
 }
