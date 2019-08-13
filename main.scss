@@ -7,6 +7,18 @@ $color-lightblue: #04C2C9;
 $color-lightpink:  #E31B6D;//lightpink;
 $color-hotpink: #E31B6D;
 
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
 body {
     // background-color: darkblue;
     background-color: $color-darkblue !important;
@@ -46,11 +58,14 @@ body {
 @mixin element-shadow {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+@mixin element-shadow-darker {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+}
 
 button, .btn {
     width: 200px;
-    padding: 10px;
-    margin: 10px;
+    padding: 20px;
+    margin: 20px;
     border-radius: 10px !important;
     border: 2px solid $color-lightpink;
     background-color: $color-lightpink;
@@ -67,6 +82,17 @@ button, .btn {
     }
 }
 
+div, p {
+    font-size: 16px;
+    @media (min-width: $screen-sm-min) and (max-width: $screen-lg-min){
+        font-size: 22px;
+    }
+    @media (max-width: $screen-lg-min) {
+        font-size: 26px;
+    }
+}
+
+
 img {
     object-fit: cover;
     width: 100%;
@@ -74,8 +100,12 @@ img {
 }
 
 .container {
-    @media (max-width: 776px) {
-        // margin: 0 !important;
+    margin: 0;
+    @media (min-width: $screen-sm-min) and (max-width: $screen-lg-min){
+        font-size: 22px;
+    }
+    @media (max-width: $screen-lg-min) {
+        margin-left: auto;
     }
 }
 
@@ -225,12 +255,13 @@ img {
     }
 
     form {
-        max-width: 400px;
+        max-width: 420px;
         padding-bottom: 10px;
         margin-bottom: 10px;
         margin: auto;
         
         fieldset {
+            padding: 0 10px;
             input, textarea {
                 display: block;
                 width: 100%;
@@ -239,6 +270,13 @@ img {
                 padding: 8px;
                 @include element-shadow;
                 border: 1px solid $color-lightgray;
+                transition: box-shadow 0.6s;
+
+                &:hover, &:focus {
+                    // padding: 10px;
+                    @include element-shadow-darker;
+                    transition: box-shadow 0.6s;
+                }
             }
         }
     }
@@ -259,12 +297,18 @@ img {
 
         /* Modal Content/Box */
     .modal-content {
+        @media (max-width: 650px) {
+            width: 60%;
+        }
         // display: inline;
         background-color: #fefefe;
         margin: 5% auto; /* 15% from the top and centered */
         padding: 20px;
         border: 2px solid #888;
-        width: 60%; /* Could be more or less, depending on screen size */
+        width: 90vw;
+        max-width: 1200px;
+
+
     
         figure {
             margin: -20px;
@@ -294,9 +338,9 @@ img {
                 vertical-align: middle;
                 margin-left: auto;
                 font-size: 40px;
-                transition: all .8s;
+                transition: all .5s;
                 &:hover {
-                    transition: all .8s;
+                    transition: all .5s;
                     font-size: 50px;
                     transform: rotate(90deg);
                 }
