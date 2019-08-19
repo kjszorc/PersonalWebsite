@@ -1,16 +1,18 @@
 $(document).ready(function() {
   // Get the modal
   var modal = document.getElementById("myModal");
-
+  var body = document.querySelector('body');
   // Get the button that opens the modal
   var btn = document.querySelectorAll("li");
 // debugger;
   // When the user clicks on the button, open the modal 
   
   btn.forEach(item => {
-    item.onclick = function() {
-      modal.style.display = "block";
-    }
+    item.addEventListener('click', function() {
+      modal.style.display = "block"; // make this class based
+      modal.style['overflow'] = 'scroll';
+      body.style['overflow'] = 'hidden';
+    });
   });
 
   var span = document.getElementById("close");

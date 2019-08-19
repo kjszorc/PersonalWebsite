@@ -297,18 +297,13 @@ img {
 
         /* Modal Content/Box */
     .modal-content {
-        @media (max-width: 650px) {
-            width: 60%;
-        }
+        max-width: 670px;
         // display: inline;
         background-color: #fefefe;
         margin: 5% auto; /* 15% from the top and centered */
         padding: 20px;
         border: 2px solid #888;
         width: 90vw;
-        max-width: 1200px;
-
-
     
         figure {
             margin: -20px;
