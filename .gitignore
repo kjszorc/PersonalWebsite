@@ -1,0 +1,8 @@
+node_modules
+
+/public
+/img
+/assets
+
+// should be build and for depolying only
+*.css

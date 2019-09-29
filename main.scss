@@ -7,6 +7,10 @@ $color-lightblue: #04C2C9;
 $color-lightpink:  #E31B6D;//lightpink;
 $color-hotpink: #E31B6D;
 
+
+// Small tablets and large smartphones (landscape view)
+$screen-xs-min: 480px;
+
 // Small tablets and large smartphones (landscape view)
 $screen-sm-min: 576px;
 
@@ -33,6 +37,16 @@ body {
     }
 }
 
+h1 {
+    font-size: 30px !important;
+    @media screen and (min-width: $screen-sm-min) {
+        font-size: 36px !important;
+    }
+    @media screen and (min-width: $screen-lg-min) {
+        font-size: 40px !important;
+    }
+}
+
 nav {
     position: fixed;
     opacity: 0.9;
@@ -44,9 +58,9 @@ nav {
     background-color: $color-darkblue;
     border: none;
     border-bottom: 2px solid $color-lightblue; 
+    color: $color-white;
 
     .navbar-brand {
-        color: $color-white;
         padding-right: 30px;
         transition: color 0.5s;
         text-transform: uppercase;
@@ -56,6 +70,24 @@ nav {
         }
         &:hover {
           cursor: pointer;
+        }
+    }
+
+    .navbar--desktop {
+        display: none;
+    }
+    .navbar--mobile {
+        display: block;
+        i {
+            font-size: 28px;
+        }
+    }
+    @media screen and (min-width:640px) {
+        .navbar--mobile {
+            display: none;
+        }
+        .navbar--desktop {
+            display: inline-block;
         }
     }
 }
@@ -144,23 +176,42 @@ img {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        padding: 30px;
+        padding: 60px;
         background: rgba(1,1, 1, 0.85);
         border: 3px solid $color-lightblue;
+        border-radius: 10px;
+
         color: white;
 
+
+        @media screen and (max-width: $screen-md-min) {
+            width: 95%;
+            padding: 60px;
+        }
+        @media screen and (max-width: $screen-xs-min) {
+            width: 95%;
+            padding: 15px;
+        }
+
         strong {
-            color: $color-lightpink;//darkorchid;
+            color: $color-lightpink;
+        }
+
+        .nav-link {
+            color: white;
+            i.fa:hover {
+                font-size: 40px;
+            }
         }
     }
 }
 
 .about-tall {
     // height: 400px; // temp delete later
-    padding-top: 10px;
+    padding: 10px 0;
 
-    .content-about {
-        padding: 20px;
+    .content--about {
+        padding: 30px 20px;
 
         figure img {
             // width: 300px;
@@ -172,6 +223,14 @@ img {
             transition: all 1.2s;
             opacity: 1;
             filter: blur(0px);
+        }
+    }
+    .content--about-text {
+        @media screen and (max-width: $screen-lg-min) {
+            padding: 25px 15px 0;
+            p {
+                font-size: 22px;
+            }
         }
     }
 }
@@ -430,16 +489,26 @@ footer {
         font-size: 14px;
         padding-left: 30px;
     }
+}
 
-    .social {
-        float: right;
-        list-style: none;
-        display: flex;
-        flex-flow: row wrap;
-    
-        .social-icons {
-            width: 45px;
-            height: 40px;
+.social {
+    float: right;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+
+    @media screen and (max-width: $screen-xs-min) {
+        padding: 0;
+        margin-left: -12px; // override bootstrap col-6
+    }
+
+    .social-icons {
+        width: 45px;
+        height: 40px;
+
+        i {
+            transition: all 0.2s;
+            font-size: 36px;
         }
     }
 }

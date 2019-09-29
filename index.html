@@ -3,7 +3,7 @@
   <head>
     <title>Krystian's Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <!-- <script type="text/javascript" src="path/to/pts.js"></script> -->
     <script src="main.js"></script>
     <link rel="stylesheet" href="public/main.css">
@@ -15,10 +15,11 @@
   </head>
   <body>
     <nav class="">
-      <div class="navbar-brand" dest="Home">Home</div>
-      <div class="navbar-brand" dest="About">About</div>
-      <div class="navbar-brand" dest="Portfolio">Portfolio</div>
-      <div class="navbar-brand" dest="Contact">Contact</div>
+      <div class="navbar-brand navbar--desktop" data-js="navbar-desktop" dest="Home">Home</div>
+      <div class="navbar-brand navbar--desktop" data-js="navbar-desktop" dest="About">About</div>
+      <div class="navbar-brand navbar--desktop" data-js="navbar-desktop" dest="Portfolio">Portfolio</div>
+      <div class="navbar-brand navbar--desktop" data-js="navbar-desktop" dest="Contact">Contact</div>
+      <div class="navbar-brand navbar--mobile"><i class="fa fa-bars"></i></div>
     </nav>
 
     <div id="Home" class="home-body">
@@ -28,11 +29,28 @@
       </figure>   
       <div class="header-content">
         <h1>
-          Hello, I'm <strong>Krystian Szorc</strong>
+          <strong>Krystian Szorc</strong>
         </h1>
         <h1>
-          I'm a full-stack developer.
+          Software Engineer
         </h1>
+        <ul class="social">
+          <li class="social-icons">
+              <a class="nav-link p-2" href="/assets/resume.pdf" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="fa fa-file"></i>
+              </a>
+          </li>
+          <li class="social-icons">
+              <a class="nav-link p-2" href="https://www.linkedin.com/in/krystian-szorc" target="_blank" rel="noopener" aria-label="linkedin">
+                <i class="fa fa-linkedin-square"></i>
+              </a>
+          </li>
+        <li class="social-icons">
+            <a class="nav-link p-2" href="https://github.com/kjszorc" target="_blank" rel="noopener" aria-label="GitHub">
+              <i class="fa fa-github-square"></i>
+            </a>
+        </li>
+      </ul>
       </div> 
     </div>
 
@@ -43,15 +61,15 @@
               About
             </h2>
           </div>
-        <div class="content-about content-center row">
+        <div class="content--about content-center row">
           <figure class="col-lg-6">
             <img src="img/krystian_portrait.jpg">
           </figure>
-          <div class="col-lg-6">
-              <p>
-                Test
-              </p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <div class="col-lg-6 content--about-text">
+              <p>I'm a software engineer who loves to solve problems that make an impact.
+                 Based in Chicago, I've helped many companies significantly improve their website's UI, performance, security and functionality. Focusing mostly on website develop, I 
+                 love to work with the full stack and take specially pride in writing frontend code that moves the user.
+                </p>
           </div>
           
         </div>
@@ -67,7 +85,7 @@
             </h2>
           </div>
           <div class="portfolio-display">
-            <ul>
+            <ul class="row">
               <li id="myBtn" on-click="openModal">
                 <figure>
                     <img src="img/WorldOfHyattLoyaltyProgram.png">
@@ -144,7 +162,7 @@
             </h2>
           </div>
           <div class="sub-text">
-            Like what you see or have a question?
+            Have a question of want to get in contact?
           </div>
           <div class="content-contact content-center">
               <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/kjszorc@yahoo.com" method="post">
@@ -196,11 +214,11 @@
 <footer class="page-footer font-small blue">
   <div class="row py-2 px-3">
     <!-- Copyright -->
-    <div class="footer-copyright col-xl-6">© 2019
+    <div class="footer-copyright col-6">© 2019
       <a href="https://www.krystianszorc.com"> Krystian Szorc</a>
     </div>
     <!-- Copyright -->
-    <div class="col-xl-6">
+    <div class="col-6">
       <ul class="social">
           <li class="social-icons">
               <a class="nav-link p-2" href="https://www.linkedin.com/in/krystian-szorc" target="_blank" rel="noopener" aria-label="linkedin">
