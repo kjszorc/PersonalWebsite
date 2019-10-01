@@ -3,7 +3,7 @@ $(document).ready(function() {
   var modal = document.getElementById("myModal");
   var body = document.querySelector('body');
   // Get the button that opens the modal
-  var btn = document.querySelectorAll("li");
+  var btn = document.querySelectorAll(".portfolio-display li");
 // debugger;
   // When the user clicks on the button, open the modal 
   
@@ -74,7 +74,7 @@ $(document).ready(function() {
   }
 
   // EVENT HANDLERS
-  $('.navbar-brand').click(function() {
+  $('[data-js="navbar-desktop"').click(function() {
     // debugger;
     var anchor = $(this).attr("dest");
     // $('.link-wrap').removeClass('visible');
@@ -117,6 +117,20 @@ $(document).ready(function() {
 
   setTimeout(function() { onScrollInit($('.waypoint')) }, 10);
 
+
+
+  // toggle nav bar
+  let navOptions = document.querySelectorAll('[data-js="navbar-desktop"]');
+  let mobileBtn = document.querySelector('[data-js="navbar-mobile"]');
+  // let isMobile = false; // need to find out if view is currently mobile...
+  let navState = false;
+
+  mobileBtn.addEventListener('click', () => {
+    navOptions.forEach((n) => {
+      n.style.display = (navState) ? 'block' : 'none';
+    });
+    navState = !navState;
+  });
 });
 
 
