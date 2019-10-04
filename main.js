@@ -1,10 +1,9 @@
-$(document).ready(function() {
+function portfolio() {
   // Get the modal
   var modal = document.getElementById("myModal");
   var body = document.querySelector('body');
   // Get the button that opens the modal
   var btn = document.querySelectorAll(".portfolio-display li");
-// debugger;
   // When the user clicks on the button, open the modal 
   
   btn.forEach(item => {
@@ -126,16 +125,17 @@ $(document).ready(function() {
   let navState = false;
 
   mobileBtn.addEventListener('click', () => {
+    console.log("mobile");
     navOptions.forEach((n) => {
       n.style.display = (navState) ? 'block' : 'none';
     });
     navState = !navState;
   });
-});
+};
+window.addEventListener('DOMContentLoaded', portfolio);
 
 
-
-
+function canvas() {
 // var space;
 
 // function floatySpace() {
@@ -215,4 +215,5 @@ $(document).ready(function() {
 //   $('canvas').remove();
 //   floatySpace();
 // });
- 
+
+}
