@@ -116,24 +116,25 @@ function portfolio() {
 
   setTimeout(function() { onScrollInit($('.waypoint')) }, 10);
 
-
-
   // toggle nav bar
+  let nav = document.querySelector('nav');
   let navOptions = document.querySelectorAll('[data-js="navbar-desktop"]');
   let mobileBtn = document.querySelector('[data-js="navbar-mobile"]');
   // let isMobile = false; // need to find out if view is currently mobile...
-  let navState = false;
 
   mobileBtn.addEventListener('click', () => {
-    console.log("mobile");
-    navOptions.forEach((n) => {
-      n.style.display = (navState) ? 'block' : 'none';
-    });
-    navState = !navState;
+    nav.classList.toggle('mobile-open');
   });
-};
-window.addEventListener('DOMContentLoaded', portfolio);
+  window.addEventListener('resize', () => {
+    console.log('toggle');
+    nav.classList.removeClass('mobile-open');
+  });
 
+
+};
+
+
+window.addEventListener('DOMContentLoaded', portfolio);
 
 function canvas() {
 // var space;

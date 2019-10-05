@@ -82,14 +82,34 @@ nav {
             font-size: 28px;
         }
     }
+    
+    &.mobile-open {
+        .navbar-brand {
+            display: inline-block;
+            width: 100%;
+        }
+    }
+
     @media screen and (min-width:640px) {
         .navbar--mobile {
             display: none;
         }
         .navbar--desktop {
             display: inline-block;
+            width: min-content;
         }
     }
+
+    @media screen and (max-width:640px) {
+        .navbar--mobile {
+            display: inline-block;
+        }
+        .navbar--desktop {
+            display: none;
+        }
+    }
+
+
 }
 
 @mixin element-shadow {
