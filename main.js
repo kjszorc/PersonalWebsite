@@ -29,7 +29,7 @@ function portfolio() {
     }
   }
 
-  var navPos = $('nav').position().top;
+  var navPos = document.querySelector('nav').position().top;
   var lastPos = 0;
   var lockTimer
 
@@ -132,7 +132,6 @@ function portfolio() {
 
 
 };
-
 
 window.addEventListener('DOMContentLoaded', portfolio);
 
