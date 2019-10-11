@@ -135,6 +135,8 @@ function portfolio() {
 
 window.addEventListener('DOMContentLoaded', portfolio);
 
+
+// TODO: add custom canvas
 function canvas() {
 // var space;
 
