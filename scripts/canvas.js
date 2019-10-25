@@ -1,10 +1,10 @@
 var space;
 
 function floatySpace() {
-  var colors = [
-    "#FF3F8E", "#04C2C9", "#2E55C1"
-  ];
-  Pts.namespace( window );
+//   var colors = [
+//     "#FF3F8E", "#04C2C9", "#2E55C1"
+//   ];
+//   Pts.namespace( window );
 
 //   var space = new CanvasSpace("#pt");
 //   space.setup({ bgcolor: "#fff" });
@@ -13,19 +13,47 @@ function floatySpace() {
 
 //   space.add( () => form.point( space.pointer, 10 ) );
 
-  let run = Pts.quickStart( "#pt", "#e2e6ef" );//( t => form.point( space.pointer, 10 ) );
+//   let run = Pts.quickStart( "#pt", "#e2e6ef" );//( t => form.point( space.pointer, 10 ) );
 
 
-  run( (time, ftime)  => {
-    // rectangle
-    var rect = Rectangle.fromCenter( space.center, space.size.$divide(2) );
-    var poly = Rectangle.corners( rect );
-    poly.shear2D( Num.cycle( time%2000/2000 ) - 0.5, space.center );
+//   run( (time, ftime)  => {
+//     // rectangle
+//     var rect = Rectangle.fromCenter( space.center, space.size.$divide(2) );
+//     var poly = Rectangle.corners( rect );
+//     poly.shear2D( Num.cycle( time%2000/2000 ) - 0.5, space.center );
     
-    // drawing
-    form.fillOnly("#123").polygon( poly );
-    form.strokeOnly("#fff", 3).rect( rect );
-  });
+//     // drawing
+//     form.fillOnly("#123").polygon( poly );
+//     form.strokeOnly("#fff", 3).rect( rect );
+//   });
+
+
+  Pts.namespace(this);
+    var space = new CanvasSpace("#pt").setup({ bgcolor: "#fff" });
+    var form = space.getForm();
+
+// animation
+space.add( (time, ftime) => {
+
+  // rectangle
+  var rect = Rectangle.fromCenter( space.center, space.size.$divide(2) );
+  var poly = Rectangle.corners( rect );
+  poly.shear2D( Num.cycle( time%5000/5000 ) - 0.5, space.center );
+  
+  // triangle
+  var tris = poly.segments( 2, 1, true );
+  tris.map( (t) => t.push( space.pointer ) );
+  
+  // circle
+  var circles = tris.map( (t) => Triangle.incircle( t ) );
+  
+  // drawing
+  form.fillOnly("#123").polygon( poly );
+  form.fill("#f03").circles( circles );
+  form.strokeOnly("#fff ", 3 ).polygons( tris );
+  form.fill("#123").point( space.pointer, 5 );
+  
+});
 
   space.bindMouse().bindTouch().play();
 //   space = new CanvasSpace("pt", "#252934" ).display();
