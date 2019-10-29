@@ -169,7 +169,7 @@ img {
 .home-body {
     position: relative;
     height: 100vh;
-    figure {
+    figure, figure div {
         height: 100%; 
         width: 100%;
         max-height: 100%; 
@@ -181,9 +181,9 @@ img {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        padding: 60px;
-        background: rgba(1,1, 1, 0.85);
-        border: 3px solid $color-lightblue;
+        // padding: 60px;
+        // background: rgba(1,1, 1, 0.25);
+        // border: 3px solid $color-lightblue;
         border-radius: 10px;
 
         color: white;
@@ -199,7 +199,8 @@ img {
         }
 
         strong {
-            color: $color-lightpink;
+            // color: $color-lightpink;
+            font-size: 50px;
         }
 
         .nav-link {

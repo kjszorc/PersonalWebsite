@@ -1,6 +1,7 @@
 var space;
 
 function floatySpace() {
+    return;
 //   var colors = [
 //     "#FF3F8E", "#04C2C9", "#2E55C1"
 //   ];
