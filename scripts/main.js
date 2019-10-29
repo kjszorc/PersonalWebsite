@@ -116,25 +116,35 @@ function portfolio() {
 
   setTimeout(function() { onScrollInit($('.waypoint')) }, 10);
 
-  // toggle nav bar
-  let nav = document.querySelector('nav');
-  let navOptions = document.querySelectorAll('[data-js="navbar-desktop"]');
-  let mobileBtn = document.querySelector('[data-js="navbar-mobile"]');
-  // let isMobile = false; // need to find out if view is currently mobile...
+  //////////////////////////
+  //
+  //    Load Particles
+  //
+  //////////////////////////
+  (function setUpNav() {
+    let nav = document.querySelector('nav');
+    let navOptions = document.querySelectorAll('[data-js="navbar-desktop"]');
+    let mobileBtn = document.querySelector('[data-js="navbar-mobile"]');
+  
+    navOptions.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        nav.classList.toggle('mobile-open', false);
+      });
+    });
+    mobileBtn.addEventListener('click', () => {
+      nav.classList.toggle('mobile-open');
+    });
+    window.addEventListener('resize', () => {
+      nav.classList.toggle('mobile-open', false);
+    });
+  })();
 
-  mobileBtn.addEventListener('click', () => {
-    nav.classList.toggle('mobile-open');
-  });
-  window.addEventListener('resize', () => {
-    console.log('toggle');
-    nav.classList.removeClass('mobile-open');
-  });
-
-
-  particlesJS.load('particles-js', 'assets/particles.json', function() {
-    console.log('callback - particles.js config loaded');
-  });
-
+  //////////////////////////
+  //
+  //    Load Particles
+  //
+  //////////////////////////
+  particlesJS.load('particles-js', 'assets/particles.json');
 };
 
 window.addEventListener('DOMContentLoaded', portfolio);

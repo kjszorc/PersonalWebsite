@@ -502,13 +502,8 @@ var pJS = function(tag_id, params){
         pJS.particles.array.push(new pJS.fn.particle(pJS.particles.color, pJS.particles.opacity.value));
       }
     };
-    var centerText = document.querySelector('div.header-content');
-    // debugger;
-    console.log(centerText.offsetWidth);
-    console.log('width: ', pJS.canvas.w);
 
     pJS.fn.particlesUpdate = function(){
-  
       for(var i = 0; i < pJS.particles.array.length; i++){
   
         /* the particle */
