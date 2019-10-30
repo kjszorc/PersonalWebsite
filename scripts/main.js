@@ -73,7 +73,7 @@ function portfolio() {
   }
 
   // EVENT HANDLERS
-  $('[data-js="navbar-desktop"').click(function() {
+  $('[data-js="navbar-desktop"]').click(function() {
     // debugger;
     var anchor = $(this).attr("dest");
     // $('.link-wrap').removeClass('visible');
