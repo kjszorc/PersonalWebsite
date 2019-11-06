@@ -15,24 +15,10 @@
     <!-- <link rel="stylesheet" href="font-awesome.min.css"> -->
   </head>
   <body>
-    <nav class="">
-      <div class="navbar--mobile">
-        <i class="navbar-brand fa fa-bars" data-js="navbar-mobile"></i>
-      </div>
-      <div class="navbar-brand navbar--desktop" data-js="navbar-desktop" dest="Home">Home</div>
-      <div class="navbar-brand navbar--desktop" data-js="navbar-desktop" dest="About">About</div>
-      <div class="navbar-brand navbar--desktop" data-js="navbar-desktop" dest="Portfolio">Portfolio</div>
-      <div class="navbar-brand navbar--desktop" data-js="navbar-desktop" dest="Contact">Contact</div>
-    </nav>
-
     <div id="Home" class="home-body">
       <figure id="pt" class="canvas">
-
         <div id="particles-js"></div>
       </figure>
-      <!-- <figure class="masthead"> -->
-        <!-- <img src="img/codecode.jpg" alt="">-->
-      <!-- </figure>    -->
       <div class="header-content">
         <h1>
           <strong>Krystian Szorc</strong>
@@ -51,144 +37,133 @@
                 <i class="fa fa-linkedin-square"></i>
               </a>
           </li>
-        <li class="social-icons">
-            <a class="nav-link p-2" href="https://github.com/kjszorc" target="_blank" rel="noopener" aria-label="GitHub">
-              <i class="fa fa-github-square"></i>
-            </a>
-        </li>
-      </ul>
+          <li class="social-icons">
+              <a class="nav-link p-2" href="https://github.com/kjszorc" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="fa fa-github-square"></i>
+              </a>
+          </li>
+        </ul>
       </div> 
     </div>
+    <nav class="">
+      <div class="navbar--mobile">
+        <i class="navbar-brand fa fa-bars" data-js="navbar-mobile"></i>
+      </div>
+      <div class="navbar-brand navbar--desktop" data-js="navbar-desktop" dest="Home">Home</div>
+      <div class="navbar-brand navbar--desktop" data-js="navbar-desktop" dest="About">About</div>
+      <div class="navbar-brand navbar--desktop" data-js="navbar-desktop" dest="Portfolio">Portfolio</div>
+      <div class="navbar-brand navbar--desktop" data-js="navbar-desktop" dest="Contact">Contact</div>
+    </nav>
 
-    <div class="section">
+    <section class="section">
       <div id="About" class="container about-tall">
-          <div class="section-header">
-            <h2 class="waypoint section-title">
-              About
-            </h2>
-          </div>
+        <div class="section-header">
+          <h2 class="waypoint section-title">
+            About
+          </h2>
+        </div>
         <div class="content--about content-center row">
           <figure class="col-lg-6">
             <img src="img/krystian_portrait.jpg">
           </figure>
           <div class="col-lg-6 content--about-text">
-              <p>I'm a software engineer who loves to solve problems that make an impact.
-                 Based in Chicago, I've helped many companies significantly improve their website's UI, performance, security and functionality. Focusing mostly on website develop, I 
-                 love to work with the full stack and take specially pride in writing frontend code that moves the user.
-                </p>
-          </div>
-          
-        </div>
-
-      </div>
-    </div>
-
-    <div class="section">
-        <div id="Portfolio" class="container tall">
-          <div class="section-header">
-            <h2 class="section-title">
-              Portfolio
-            </h2>
-          </div>
-          <div class="portfolio-display">
-            <ul class="row">
-              <li id="myBtn" on-click="openModal">
-                <figure>
-                    <img src="img/WorldOfHyattLoyaltyProgram.png">
-                </figure>
-                <div class="preview">
-                  <h3>
-                    Hyatt
-                  </h3>
-                  <span>
-                    VueJS, Java
-                  </span>
-                  <button class="btn learn-more">
-                    Learn More
-                  </button>
-                </div>
-              </li>
-              <li>
-                <figure>
-                    <img src="img/levinson-home.jpg">
-                </figure>
-                <!-- <button class="learn-more">
-                  Levinson
-                </button> -->
-              </li>
-              <li>
-                <figure>
-                    <img src="img/shipbob-home.jpg">
-                </figure>
-                <!-- <button class="learn-more">
-                  Shipbob
-                </button> -->
-                
-              </li>
-              <li>
-                <figure>
-                    <img src="img/shipbob-home.jpg">
-                </figure>
-                <!-- <button class="learn-more">
-                  Geneca
-                </button> -->
-                
-              </li>
-              <li>
-                <figure>
-                    <img src="img/cmt-home.png">
-                </figure>
-                <!-- <button class="learn-more">
-                  xCelor/CMT
-                </button>               -->
-              </li>
-              <li>
-                  <figure>
-                      <img src="img/hyatt-home.png">
-                  </figure>
-                  <!-- <button class="learn-more">
-                    xCelor/CMT
-                  </button>               -->
-                </li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="section">
-          <!-- <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
-            <path d="M0 0 L50 100 L100 0 Z" ></path>
-          </svg> -->
-        <div id="Contact" class="container contact-tall">
-
-          <div class="section-header">
-            <h2 class="section-title">
-                Contact
-            </h2>
-          </div>
-          <div class="sub-text">
-            Have a question of want to get in contact?
-          </div>
-          <div class="content-contact content-center">
-              <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/kjszorc@yahoo.com" method="post">
-                <fieldset id="fs-frm-inputs">
-                  <input type="text" name="name" id="full-name" placeholder="Name" required="">
-                  <input type="email" name="_replyto" id="email-address" placeholder="Email" required="">
-                  <textarea rows="8" name="message" id="message" placeholder="Your message" required=""></textarea>
-                  <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-                </fieldset>
-                <input class="btn" type="submit" value="Submit"></br>
-              </form>
+            <p>I'm a software engineer who loves to solve problems that make an impact.
+                Based in Chicago, I've helped many companies significantly improve their website's UI, performance, security and functionality. Focusing mostly on website develop, I 
+                love to work with the full stack and take specially pride in writing frontend code that moves the user.
+            </p>
           </div>
         </div>
       </div>
+    </section>
+
+    <section class="section">
+      <div id="Portfolio" class="container tall">
+        <div class="section-header">
+          <h2 class="section-title">
+            Portfolio
+          </h2>
+        </div>
+        <div class="portfolio-display">
+          <div class="row">
+            <div class="portfolio-item" id="myBtn" on-click="openModal">
+              <figure>
+                  <img src="img/WorldOfHyattLoyaltyProgram.png">
+              </figure>
+              <div class="preview">
+                <h3>
+                  Hyatt
+                </h3>
+                <span>
+                  VueJS, Java
+                </span>
+                <button class="btn learn-more">
+                  Learn More
+                </button>
+              </div>
+            </div>
+            <div class="portfolio-item">
+              <figure>
+                <img src="img/levinson-home.jpg">
+              </figure>
+            </div>
+            <div class="portfolio-item">
+              <figure>
+                <img src="img/shipbob-home.jpg">
+              </figure>
+            </div>
+          </div>
+          <div class="row">
+            <div class="portfolio-item">
+              <figure>
+                <img src="img/geneca-home.png">
+              </figure>
+            </div>
+            <div class="portfolio-item">
+              <figure>
+                <img src="img/cmt-home.png">
+              </figure>
+            </div>
+            <div class="portfolio-item">
+              <figure>
+                <img src="img/levinson-home.jpg">
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+        <!-- <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
+          <path d="M0 0 L50 100 L100 0 Z" ></path>
+        </svg> -->
+      <div id="Contact" class="container contact-tall">
+        <div class="section-header">
+          <h2 class="section-title">
+            Contact
+          </h2>
+        </div>
+        <div class="sub-text">
+          Have a question of want to get in contact?
+        </div>
+        <div class="content-contact content-center">
+          <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/kjszorc@yahoo.com" method="post">
+            <fieldset id="fs-frm-inputs">
+              <input type="text" name="name" id="full-name" placeholder="Name" required="">
+              <input type="email" name="_replyto" id="email-address" placeholder="Email" required="">
+              <textarea rows="8" name="message" id="message" placeholder="Your message" required=""></textarea>
+              <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+            </fieldset>
+            <input class="btn" type="submit" value="Submit"></br>
+          </form>
+        </div>
+      </div>
+    </section>
 
 
 
   <!-- The Modal -->
   <div id="myModal" class="modal">
-
     <!-- Modal content -->
     <div class="modal-content">
       <figure>
@@ -217,39 +192,32 @@
   </body>
 
   <!-- Footer -->
-<footer class="page-footer font-small blue">
-  <div class="row py-2 px-3">
-    <!-- Copyright -->
-    <div class="footer-copyright col-6"><i class="fa fa-copyright"></i> 2019
-      <a href="https://www.krystianszorc.com"> Krystian Szorc</a>
-    </div>
-    <!-- Copyright -->
-    <div class="col-6">
-      <ul class="social">
+  <footer class="page-footer font-small blue">
+    <div class="row py-2 px-3">
+      <!-- Copyright -->
+      <div class="footer-copyright col-6"><i class="fa fa-copyright"></i> 2019
+        <a href="https://www.krystianszorc.com"> Krystian Szorc</a>
+      </div>
+      <!-- Copyright -->
+      <div class="col-6">
+        <ul class="social">
           <li class="social-icons">
-              <a class="nav-link p-2" href="https://www.linkedin.com/in/krystian-szorc" target="_blank" rel="noopener" aria-label="linkedin">
-                <i class="fa fa-linkedin-square" style="font-size:36px"></i>
-              </a>
+            <a class="nav-link p-2" href="https://www.linkedin.com/in/krystian-szorc" target="_blank" rel="noopener" aria-label="linkedin">
+              <i class="fa fa-linkedin-square" style="font-size:36px"></i>
+            </a>
           </li>
-        <li class="social-icons">
+          <li class="social-icons">
             <a class="nav-link p-2" href="https://github.com/kjszorc" target="_blank" rel="noopener" aria-label="GitHub">
               <i class="fa fa-github-square" style="font-size:36px"></i>
-              <!-- <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 499.36" focusable="false"><title>GitHub</title><path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"></path></svg> -->
             </a>
-        </li>
-        <li class="social-icons">
+          </li>
+          <li class="social-icons">
             <a class="nav-link p-2" href="#" target="_blank" rel="noopener" aria-label="Stack Overflow">
               <i class="fa fa-stack-overflow" style="font-size:36px"></i>
             </a>
-        </li>
-        <!-- <li class="social-icons">
-            <a class="nav-link p-2" href="#" target="_blank" rel="noopener" aria-label="GitHub">
-              <i class="fa fa-file" style="font-size:36px"></i>
-            </a>
-        </li> -->
-      </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
   </footer>
-  <!-- Footer -->
 </html>

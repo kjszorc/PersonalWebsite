@@ -118,7 +118,7 @@ function portfolio() {
 
   //////////////////////////
   //
-  //    Load Particles
+  //    Navbar
   //
   //////////////////////////
   (function setUpNav() {
@@ -144,7 +144,7 @@ function portfolio() {
   //    Load Particles
   //
   //////////////////////////
-  particlesJS.load('particles-js', 'assets/particles.json');
+  particlesJS.load('particles-js', 'scripts/particles.json');
 };
 
 window.addEventListener('DOMContentLoaded', portfolio);
