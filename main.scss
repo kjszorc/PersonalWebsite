@@ -47,7 +47,10 @@ h1 {
     }
 }
 
-nav {
+nav.navbar-top {
+    display: flex;
+    // flex-direction: row-reverse;
+    justify-content: flex-end;
     position: sticky;
     opacity: 0.9;
     top: 0;
@@ -79,7 +82,7 @@ nav {
         display: none;
     }
     .navbar--mobile {
-        float: right;
+        // float: right;
         i {
             font-size: 28px;
         }
@@ -94,6 +97,7 @@ nav {
     }
 
     @media screen and (min-width:640px) {
+        display: block;
         .navbar--mobile {
             display: none;
         }
@@ -202,8 +206,7 @@ img {
         }
 
         strong {
-            // color: $color-lightpink;
-            font-size: 50px;
+            font-size: 3rem;
         }
 
         .nav-link {
@@ -238,7 +241,8 @@ img {
         @media screen and (max-width: $screen-lg-min) {
             padding: 25px 15px 0;
             p {
-                font-size: 22px;
+                font-size: 16px;
+                text-align: left;
             }
         }
     }
@@ -260,7 +264,9 @@ img {
             padding: 10px;
 
             .portfolio-item {
-                display: inline;
+                // display: inline;
+                flex: 1;
+
                 margin: 10px;
                 position: relative;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -280,10 +286,12 @@ img {
                     }
                 }
                 figure img {
-                    width: 300px;
-                    height: 200px;
-                    max-width: 300px;
-                    max-height: 300px;
+                    // width: 300px;
+                    // height: 200px;
+                    // max-width: 300px;
+                    // max-height: 300px;
+                    min-width: 300px;
+                    min-height: 300px;
                     transition: all 1.2s;
                     opacity: 1;
                     filter: blur(0px);
