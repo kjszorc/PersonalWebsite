@@ -9,6 +9,7 @@
     <script src="scripts/main.js"></script>
     <script src="scripts/canvas.js"></script>
     <script src="scripts/particles.js"></script>
+    <script src="scripts/modal.js"></script>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,10 +22,12 @@
       </figure>
       <div class="header-content">
         <h1>
-          <strong>Krystian Szorc</strong>
+          <strong>
+            <!-- Krystian Szorc -->
+          </strong>
         </h1>
         <h1>
-          Software Engineer
+          <!-- Software Engineer -->
         </h1>
         <ul class="social">
           <li class="social-icons">
@@ -87,7 +90,7 @@
           <div class="row">
             <div class="portfolio-item" id="myBtn" on-click="openModal">
               <figure>
-                  <img src="img/WorldOfHyattLoyaltyProgram.png">
+                  <img src="img/WorldOfHyattLoyaltyProgram.png"/>
               </figure>
               <div class="preview">
                 <h3>
@@ -96,36 +99,75 @@
                 <span>
                   VueJS, Java
                 </span>
-                <button class="btn learn-more">
+                <button class="btn learn-more" data-modal="Hyatt">
                   Learn More
                 </button>
               </div>
             </div>
-            <div class="portfolio-item">
+            <div class="portfolio-item" id="myBtn" on-click="openModal">
+                <figure>
+                    <img src="img/levinson-home.jpg"/>
+                </figure>
+                <div class="preview">
+                  <h3>
+                    Levinson
+                  </h3>
+                  <span>
+                    AngularJS, C#
+                  </span>
+                  <button class="btn learn-more" data-modal="Levinson">
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            <div class="portfolio-item" id="myBtn" on-click="openModal">
               <figure>
-                <img src="img/levinson-home.jpg">
+                  <img src="img/shipbob-home.jpg">
               </figure>
+              <div class="preview">
+                <h3>
+                  ShipBob
+                </h3>
+                <span>
+                  VueJS, C#
+                </span>
+                <button class="btn learn-more" data-modal="ShipBob">
+                  Learn More
+                </button>
+              </div>
             </div>
-            <div class="portfolio-item">
+            <div class="portfolio-item" id="myBtn" on-click="openModal">
               <figure>
-                <img src="img/shipbob-home.jpg">
+                  <img src="img/geneca-home.png"/>
               </figure>
+              <div class="preview">
+                <h3>
+                  Geneca
+                </h3>
+                <span>
+                  AngularJS, C#, .NET
+                </span>
+                <button class="btn learn-more" data-modal="Geneca">
+                  Learn More
+                </button>
+              </div>
             </div>
-            <div class="portfolio-item">
-              <figure>
-                <img src="img/geneca-home.png">
-              </figure>
-            </div>
-            <div class="portfolio-item">
-              <figure>
-                <img src="img/cmt-home.png">
-              </figure>
-            </div>
-            <div class="portfolio-item">
-              <figure>
-                <img src="img/levinson-home.jpg">
-              </figure>
-            </div>
+            <div class="portfolio-item" id="myBtn" on-click="openModal">
+                <figure>
+                    <img src="img/cmt-home.png"/>
+                </figure>
+                <div class="preview">
+                  <h3>
+                    Capital Market Trading
+                  </h3>
+                  <span>
+                    C#, .NET
+                  </span>
+                  <button class="btn learn-more" data-modal="CMT">
+                    Learn More
+                  </button>
+                </div>
+              </div>
           </div>
         </div>
       </div>
@@ -165,22 +207,20 @@
     <!-- Modal content -->
     <div class="modal-content">
       <figure>
-        <img src="img/shipbob-home.jpg">
+        <img class="modal__image-hidden" data-img="Hyatt" src="img/WorldOfHyattLoyaltyProgram.png"/>
+        <img class="modal__image-hidden" data-img="ShipBob" src="img/shipbob-home.jpg"/>
+        <img class="modal__image-hidden" data-img="Levinson" src="img/levinson-home.jpg"/>
+        <img class="modal__image-hidden" data-img="Geneca" src="img/geneca-home.jpg"/>
+        <img class="modal__image-hidden" data-img="CMT" src="img/cmt-home.png"/>
       </figure>
-      <div class="title">
-        World of Hyatt
+      <div class="title" data-js="modal-title">
       </div>
-      <div class="tag">
-        VueJS and Java with AEM
+      <div class="tag" data-js="modal-tag">
       </div>
-      <p class="description">Currently working on the World of Hyatt team to help their web app 
-        achieve new visuals and design. Re-designed the My Account page to provide 
-        a leaner page while adding functionality like point conversions for miles with American Airlines and a brand explorer view to receive 
-        free nights for staying with different brands.
-      </p>
+      <p class="description" data-js="modal-description"></p>
 
       <div class="row">
-        <a class="btn" href="https://world.hyatt.com">
+        <a class="btn" data-js="modal-link">
           Visit Site
         </a>
         <span id="close" class="close">&times;</span>

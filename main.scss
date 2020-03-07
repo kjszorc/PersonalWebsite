@@ -301,7 +301,8 @@ img {
                     // display: none;
                     position: absolute;
                     height: 100%;
-                    top: 10%;
+                    // top: 10%;
+                    top: 0;
                     left: 50%;
                     transform: translate(-50%, 0%);
                     font-size: 22px;
@@ -310,6 +311,11 @@ img {
                     transition: all 1.2s;
                     opacity: 0;
 
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+
                     .learn-more {
                         // position: absolute;
                         // top: 80%;
@@ -317,7 +323,8 @@ img {
                         // transform: translate(-50%, -50%);
                         border-color: $color-lightpink;
                         font-size: 22px;
-                        margin: 26 auto auto;
+                        // margin: 26px auto auto;
+                        margin: 25px auto;
                         text-align: center;
                     }
                 }
@@ -394,6 +401,13 @@ img {
             padding-bottom: 30px;
             img {
                 max-height: 300px;
+
+                &.modal__image-hidden {
+                    display: none;
+                    &.active {
+                        display: block;
+                    }
+                }
             }
         }
 
