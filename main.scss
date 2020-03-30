@@ -2,7 +2,7 @@
 $color-darkblue: #1B242F;
 $color-white: #FFFFFF;
 $color-lightgray: #CCC;
-$color-black: #000;
+$color-black: #111;
 $color-lightblue: #04C2C9;
 $color-lightpink:  #E31B6D;//lightpink;
 $color-hotpink: #E31B6D;
@@ -244,6 +244,23 @@ img {
                 font-size: 16px;
                 text-align: left;
             }
+        }
+    }
+
+    .skill-title {
+        margin: auto;
+    }
+    .skill-list {
+        display: flex;
+        justify-items: center;
+        justify-content: space-between;
+        flex: 1;
+
+        div {
+            padding: 10px;
+            border: 1px solid $color-lightgray;
+            border-radius: 5px;
+            background-color: white;
         }
     }
 }
