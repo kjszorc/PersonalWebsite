@@ -30,11 +30,11 @@
           Software Engineer
         </h1>
         <ul class="social">
-          <li class="">
-              <a class="nav-link p-2" href="/assets/resume.pdf" target="_blank" rel="noopener" aria-label="GitHub">
+          <!-- <li class="">
+              <a class="nav-link p-2" href="/" target="_blank" rel="noopener" aria-label="GitHub">
                 See More
               </a>
-          </li>
+          </li> -->
           <li class="social-icons">
               <a class="nav-link p-2" href="/assets/resume.pdf" target="_blank" rel="noopener" aria-label="GitHub">
                 <i class="fa fa-file"></i>
@@ -81,18 +81,16 @@
             </p>
           </div>
         </div>
-
-      <div>
-          <i class="product-details fa fa-tachometer"></i>
-          <i class="product-details fa fa-lightbulb-o"></i>
-          <img class="product-details" src="img/responsive-icon.png">
-      </div>
-
-
-        <h4 class="skill-title">
-          Skills
-        </h4>
-        <div class="skill-list">
+        <div style="display: none;">
+          <div>
+              <i class="product-details fa fa-tachometer"></i>
+              <i class="product-details fa fa-lightbulb-o"></i>
+              <img class="product-details" src="img/responsive-icon.png">
+          </div>
+          <h4 class="skill-title">
+            Skills
+          </h4>
+          <div class="skill-list">
             <div>
               JavaScript
             </div>
@@ -114,8 +112,9 @@
             <div>
               SQL
             </div>
-        </div>
+          </div>
       </div>
+    </div>
     </section>
 
     <section class="section">
@@ -139,7 +138,7 @@
                     <span>
                       HandleBars JS, Java
                     </span>
-                    <button class="btn learn-more" data-modal="Hyatt">
+                    <button class="btn learn-more" data-modal="Grainger">
                       Learn More
                     </button>
                   </div>
@@ -241,7 +240,7 @@
           </h2>
         </div>
         <div class="sub-text">
-          Have a question of want to get in contact?
+          Have a question or want to get in contact?
         </div>
         <div class="content-contact content-center">
           <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/kjszorc@yahoo.com" method="post">
@@ -257,13 +256,12 @@
       </div>
     </section>
 
-
-
   <!-- The Modal -->
   <div id="myModal" class="modal">
     <!-- Modal content -->
     <div class="modal-content">
       <figure>
+        <img class="modal__image-hidden" data-img="Grainger" src="img/WorldOfHyattLoyaltyProgram.png"/>
         <img class="modal__image-hidden" data-img="Hyatt" src="img/WorldOfHyattLoyaltyProgram.png"/>
         <img class="modal__image-hidden" data-img="ShipBob" src="img/shipbob-home.jpg"/>
         <img class="modal__image-hidden" data-img="Levinson" src="img/levinson-home.jpg"/>
@@ -271,7 +269,7 @@
         <img class="modal__image-hidden" data-img="CMT" src="img/cmt-home.png"/>
       </figure>
       <div class="title" data-js="modal-title">
-      </div><i class="fa fa-copyright"></i>
+      </div>
       <div class="tag" data-js="modal-tag">
       </div>
       <p class="description" data-js="modal-description"></p>

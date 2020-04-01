@@ -14,11 +14,11 @@ function initModal() {
 
             // Set modal
             var id = item.getAttribute('data-modal');
-            var obj = modalContent.find(m => m.name == id);
-            document.querySelector('[data-js="modal-description"]').innerHTML = obj.description;
-            document.querySelector('[data-js="modal-tag"]').innerHTML = obj.tag;
-            document.querySelector('[data-js="modal-link"]').setAttribute('href',obj.link);
-            document.querySelector('[data-js="modal-title"]').innerHTML = obj.name;
+            var { description, tag, link, name } = modalContent.find(m => m.name == id);
+            document.querySelector('[data-js="modal-description"]').innerHTML = description;
+            document.querySelector('[data-js="modal-tag"]').innerHTML = tag;
+            document.querySelector('[data-js="modal-link"]').setAttribute('href',link);
+            document.querySelector('[data-js="modal-title"]').innerHTML = name;
             document.querySelector(`[data-img="${id}"]`).classList.add('active');
 
         });
@@ -44,6 +44,12 @@ function initModal() {
 }
 
 const modalContent = [{
+        'name': 'Grainger',
+        'tag': 'HandlebarsJS with Javad',
+        'link': 'https://www.grainger.com',
+        'description': `Working on the Search Adaptive Responsince (SAR) team to create a better desktop and mobile UI.`,
+        
+    },{
         'name': 'Hyatt',
         'tag': 'VueJS and Java with AEM',
         'link': 'https://www.world.hyatt.com',
