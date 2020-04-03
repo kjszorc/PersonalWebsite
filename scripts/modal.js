@@ -1,14 +1,19 @@
+  //////////////////////////
+  //
+  //    Modals
+  //
+  //////////////////////////
 function initModal() {
     // Get the modal
-    var modal = document.getElementById("myModal");
+    var modal = document.querySelector('[data-js="modal"]');
     var body = document.querySelector('body');
     // Get the button that opens the modal
-    var btn = document.querySelectorAll(".portfolio-display button");
+    var btn = document.querySelectorAll('.portfolio-display button');
     // When the user clicks on the button, open the modal 
 
     btn.forEach(item => {
         item.addEventListener('click', function() {
-            modal.style.display = "block"; // make this class based
+            modal.style.display = 'block'; // make this class based
             modal.style['overflow'] = 'scroll';
             body.style['overflow'] = 'hidden';
 
@@ -20,7 +25,6 @@ function initModal() {
             document.querySelector('[data-js="modal-link"]').setAttribute('href',link);
             document.querySelector('[data-js="modal-title"]').innerHTML = name;
             document.querySelector(`[data-img="${id}"]`).classList.add('active');
-
         });
     });
     var span = document.getElementById("close");
