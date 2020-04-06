@@ -43,13 +43,14 @@ function initModal() {
         // debugger;
         if (event.target == modal) {
             modal.style.display = "none";
+            body.style['overflow'] = 'scroll';
         }
     }
 }
 
 const modalContent = [{
         'name': 'Grainger',
-        'tag': 'HandlebarsJS with Javad',
+        'tag': 'JavaScript (NodeJS, HandlebarsJS), HTML, CSS with Java',
         'link': 'https://www.grainger.com',
         'description': `Working on the Search Adaptive Responsince (SAR) team to create a better desktop and mobile UI.`,
         
