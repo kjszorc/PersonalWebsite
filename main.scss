@@ -398,6 +398,19 @@ img {
     }
 }
 
+.modal.modal-opened {
+    display: block;
+    overflow: scroll;
+
+    .modal-content {
+        width: 95vw;
+        max-width: 670px;
+        transition: 1s all;
+
+        transform: scale(1);
+    }
+}
+
 /* The Modal (background) */
 .modal {
     display: block; /* Hidden by default */
@@ -411,16 +424,20 @@ img {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
 
+
+
         /* Modal Content/Box */
     .modal-content {
-        max-width: 670px;
         // display: inline;
         background-color: #fefefe;
         margin: 5% auto; /* 15% from the top and centered */
         padding: 20px;
         border: 2px solid #888;
-        width: 95vw;
-    
+        
+        width: 0;
+        transition: 1s all;
+        transform: scale(1);
+
         figure {
             margin: -20px;
             padding-bottom: 30px;

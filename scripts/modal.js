@@ -13,8 +13,7 @@ function initModal() {
 
     btn.forEach(item => {
         item.addEventListener('click', function() {
-            modal.style.display = 'block'; // make this class based
-            modal.style['overflow'] = 'scroll';
+            modal.classList.add('modal-opened');
             body.style['overflow'] = 'hidden';
 
             // Set modal
@@ -29,9 +28,9 @@ function initModal() {
     });
     var span = document.getElementById("close");
 
-    // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
-        modal.style.display = "none";
+        // modal.style.display = "none";
+        modal.classList.remove('modal-opened');
         body.style['overflow'] = 'scroll';
 
         document.querySelector(`.modal__image-hidden.active`).classList.remove('active');
@@ -42,7 +41,7 @@ function initModal() {
     window.onclick = function(event) {
         // debugger;
         if (event.target == modal) {
-            modal.style.display = "none";
+            modal.classList.remove('modal-opened');
             body.style['overflow'] = 'scroll';
         }
     }
