@@ -77,7 +77,7 @@
           <div class="col-lg-6 content--about-text">
             <p>I'm a software engineer who loves to solve problems that make an impact.
                 Based in Chicago, I've helped many companies significantly improve their website's UI, performance, security and functionality. Focusing mostly on website develop, I 
-                love to work with the full stack and take specially pride in writing frontend code that moves the user.
+                love to work with the latest technologies and turn business ideas into software solutions.
             </p>
           </div>
         </div>
@@ -128,8 +128,7 @@
           <div class="row">
               <div class="portfolio-item" id="myBtn" on-click="openModal">
                   <figure>
-                      <img src="img/grainger-logo1.png"/>
-                      <!-- <img src="img/WorldOfHyattLoyaltyProgram.png"/> -->
+                      <img src="img/grainger/grainger-logo.png" class="grainger-logo"/>
                   </figure>
                   <div class="preview">
                     <h3>
@@ -145,8 +144,7 @@
                 </div>
             <div class="portfolio-item" id="myBtn" on-click="openModal">
               <figure>
-                  <img src="img/hyatt-logo.jpg"/>
-                  <!-- <img src="img/WorldOfHyattLoyaltyProgram.png"/> -->
+                  <img src="img/hyatt/hyatt-logo.jpg"/>
               </figure>
               <div class="preview">
                 <h3>
@@ -162,39 +160,7 @@
             </div>
             <div class="portfolio-item" id="myBtn" on-click="openModal">
               <figure>
-                  <img src="img/shipbob-home.jpg">
-              </figure>
-              <div class="preview">
-                <h3>
-                  ShipBob
-                </h3>
-                <span>
-                  VueJS, C#
-                </span>
-                <button class="btn learn-more" data-modal="ShipBob">
-                  Learn More
-                </button>
-              </div>
-            </div>
-            <div class="portfolio-item" id="myBtn" on-click="openModal">
-                <figure>
-                    <img src="img/levinson-home.jpg"/>
-                </figure>
-                <div class="preview">
-                  <h3>
-                    Levinson
-                  </h3>
-                  <span>
-                    AngularJS, C#
-                  </span>
-                  <button class="btn learn-more" data-modal="Levinson">
-                    Learn More
-                  </button>
-                </div>
-              </div>
-            <div class="portfolio-item" id="myBtn" on-click="openModal">
-              <figure>
-                  <img src="img/geneca-logo.png"/>
+                  <img src="img/geneca/geneca-logo.png" class="geneca-logo"/>
               </figure>
               <div class="preview">
                 <h3>
@@ -209,8 +175,40 @@
               </div>
             </div>
             <div class="portfolio-item" id="myBtn" on-click="openModal">
+              <figure>
+                  <img src="img/shipbob/shipbob-home.jpg">
+              </figure>
+              <div class="preview">
+                <h3>
+                  ShipBob
+                </h3>
+                <span>
+                  VueJS, C#
+                </span>
+                <button class="btn learn-more" data-modal="ShipBob">
+                  Learn More
+                </button>
+              </div>
+            </div>
+            <div class="portfolio-item" id="myBtn" on-click="openModal">
+              <figure>
+                  <img src="img/levinson/lev-logo-large.png" class="levinson-logo"/>
+              </figure>
+              <div class="preview">
+                <h3>
+                  Levinson Locations
+                </h3>
+                <span>
+                  AngularJS, C#
+                </span>
+                <button class="btn learn-more" data-modal="Levinson">
+                  Learn More
+                </button>
+              </div>
+            </div>
+            <div class="portfolio-item" id="myBtn" on-click="openModal">
                 <figure>
-                    <img src="img/cmt-home.png"/>
+                    <img src="img/cmt/cmt-main-logo.svg" class="cmt-logo"/>
                 </figure>
                 <div class="preview">
                   <h3>
@@ -261,12 +259,12 @@
     <!-- Modal content -->
     <div class="modal-content">
       <figure>
-        <img class="modal__image-hidden" data-img="Grainger" src="img/WorldOfHyattLoyaltyProgram.png"/>
-        <img class="modal__image-hidden" data-img="Hyatt" src="img/WorldOfHyattLoyaltyProgram.png"/>
-        <img class="modal__image-hidden" data-img="ShipBob" src="img/shipbob-home.jpg"/>
-        <img class="modal__image-hidden" data-img="Levinson" src="img/levinson-home.jpg"/>
-        <img class="modal__image-hidden" data-img="Geneca" src="img/geneca-home.png"/>
-        <img class="modal__image-hidden" data-img="CMT" src="img/cmt-home.png"/>
+        <img class="modal__image-hidden" data-img="Grainger" src="img/grainger/grainger-seach.png"/>
+        <img class="modal__image-hidden" data-img="Hyatt" src="img/hyatt/WorldOfHyattLoyaltyProgram.png"/>
+        <img class="modal__image-hidden" data-img="ShipBob" src="img/shipbob/shipbob-logo.jpeg"/>
+        <img class="modal__image-hidden" data-img="Levinson" src="img/levinson/levionson-homepage.png"/>
+        <img class="modal__image-hidden" data-img="Geneca" src="img/geneca/geneca-home.png"/>
+        <img class="modal__image-hidden" data-img="CMT" src="img/cmt/cmt-home.png"/>
       </figure>
       <div class="title" data-js="modal-title">
       </div>
@@ -288,8 +286,8 @@
   <footer class="page-footer font-small blue">
     <div class="row py-2 px-3">
       <!-- Copyright -->
-      <div class="footer-copyright col-6"><i class="fa fa-copyright"></i> 2019
-        <a href="https://www.krystianszorc.com"> Krystian Szorc</a>
+      <div class="footer-copyright col-6"><i class="fa fa-copyright"></i> <script> document.write(new Date().getFullYear()); </script>
+        <a href="https://www.krystianszorc.com" class="footer__author-name"> Krystian Szorc</a>
       </div>
       <!-- Copyright -->
       <div class="col-6">

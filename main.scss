@@ -285,9 +285,8 @@ img {
             padding: 10px;
 
             .portfolio-item {
-                // display: inline;
                 flex: 1;
-
+                max-height: 325px;
                 margin: 10px;
                 position: relative;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -319,6 +318,28 @@ img {
                         transition: all 1.2s;
                         opacity: 1;
                         filter: blur(0px);
+                    }
+
+                    .levinson-logo {
+                        object-fit: contain;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    .grainger-logo {
+                        object-fit: contain;
+                        // padding-top: 30px;
+                        // min-height: 270px;
+                    }
+                    .cmt-logo {
+                        background-color: #333;
+                        object-fit: contain;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    .geneca-logo {
+                        object-fit: contain;
+                        padding-left: 10px;
+                        padding-right: 10px;
                     }
                 }
 
@@ -470,17 +491,23 @@ img {
         .row {
             margin: 0px;
             height: 80px;
+            justify-content: space-between;
+
+            .btn {
+                max-height: 40px;
+            }
     
             .close {
                 vertical-align: middle;
                 margin: 20px;
-                margin-left: auto;
+                // margin-left: auto;
+                float: right;
                 font-size: 40px;
                 transition: all .5s;
                 &:hover {
                     transition: all .5s;
                     font-size: 50px;
-                    margin-top: 15px;
+                    margin-top: 10px;
                     // margin-bottom: 15px;
                 }
             }
@@ -565,6 +592,10 @@ footer {
         margin: auto;
         font-size: 14px;
         padding-left: 30px;
+    }
+
+    .footer__author-name {
+        white-space: nowrap;
     }
 }
 
