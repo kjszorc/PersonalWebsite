@@ -427,9 +427,19 @@ img {
         width: 95vw;
         max-width: 670px;
         transition: 1s all;
-        
-
         transform: scale(1);
+
+
+        @media screen and (max-width: $screen-md-min) {
+            width: 100vw;
+            height: 100vh;
+            // margin: 0;
+            // padding: 0;
+
+            .modal__row--bottom {
+                position: fixed;
+            }
+        }
     }
 }
 
@@ -460,11 +470,15 @@ img {
         transition: 1s all;
         transform: scale(1);
 
+
         figure {
             margin: -20px;
             padding-bottom: 30px;
             img {
-                max-height: 300px;
+                // max-height: 300px;
+                border-bottom: 3px solid #1b242f;
+
+                object-fit: fill;
 
                 &.modal__image-hidden {
                     display: none;
@@ -487,8 +501,11 @@ img {
 
         .description {
             padding: 20px 0;
+            @media screen and (min-width: $screen-lg-min){
+                font-size: 22px;
+            }
         }
-        .row {
+        .modal__row--bottom {
             margin: 0px;
             height: 80px;
             justify-content: space-between;
@@ -515,6 +532,13 @@ img {
     } 
 }
 
+.carousel {
+    margin: auto;
+    // max-width: 760px;s
+
+    margin: -20px;
+    padding-bottom: 30px;
+}
 .svgcolor-light {
     // fill: linear-gradient(to right, rgba( 4, 194, 201, 0.16) , rgba( 228, 247, 20, 0.19));
     background-image: linear-gradient(to right, rgba( 4, 194, 201, 0.16) , rgba( 228, 247, 20, 0.19));

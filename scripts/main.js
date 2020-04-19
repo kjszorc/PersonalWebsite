@@ -50,7 +50,7 @@ function portfolio() {
     // $('.link-wrap').removeClass('visible');
 
     $('nav div').removeClass('active');
-    $("nav").find('[dest="'+ anchor +'"]').addClass('active');
+    $('nav').find('[dest="'+ anchor +'"]').addClass('active');
 
     $('html, body').animate({
       scrollTop: $('#' + anchor).offset().top,

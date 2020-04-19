@@ -34,12 +34,10 @@ function initModal() {
         body.style['overflow'] = 'scroll';
 
         document.querySelector(`.modal__image-hidden.active`).classList.remove('active');
-
     }
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
-        // debugger;
         if (event.target == modal) {
             modal.classList.remove('modal-opened');
             body.style['overflow'] = 'scroll';
@@ -51,37 +49,37 @@ const modalContent = [{
         'name': 'Grainger',
         'tag': 'JavaScript (NodeJS, HandlebarsJS), HTML, CSS with Java',
         'link': 'https://www.grainger.com',
-        'description': `Working on the Search Adaptive Responsince (SAR) team to create a better desktop and mobile UI.`,
-        
+        'description': `Currently working on the Search Adaptive Responsince (SAR) team to create a 
+                        better desktop and mobile UI. Implementing a new, fully responsive, product
+                        description page compatiable with over 60 million products.`,
     },{
         'name': 'Hyatt',
         'tag': 'VueJS and Java with AEM',
         'link': 'https://www.world.hyatt.com',
-        'description': `Currently working on the World of Hyatt team to help their web app achieve new visuals and design. 
+        'description': `Worked on the World of Hyatt team to help their web app achieve new visuals and design. 
                         Re-designed the My Account page to provide a leaner page while adding functionality like point 
                         conversions for miles with American Airlines and a brand explorer view to receive free nights for 
                         staying with different brands.`,
-        
     },{
         'name': 'Geneca',
         'tag': 'AngularJS, C#, .NET, and Azure',
         'link': 'https://www.geneca.com',
-        'description': `Test geneca`,
+        'description': `Built custom software solutions for clients in a variety of businesses. Developed prototypes, set up development and QA environments along with databases and security.  `,
     },{
         'name': 'ShipBob',
         'tag': 'VueJS, C#, .NET, and Azure',
-        'link': 'https://www.geneca.com',
-        'description': `Test shipbob`,
+        'link': 'https://www.shipbob.com/',
+        'description': `Enhanced the developemt of a warehouse application to improve the package return flow and with bulk orders. Optimized grouping of batch orders.`,
     },{
         'name': 'Levinson',
         'tag': 'AngularJS, C#, .NET, and Azure',
-        'link': 'https://www.geneca.com',
-        'description': `Test levinson`,
+        'link': 'http://levinsonlocations.com/',
+        'description': ``,
     },{
-        'name': 'xCelor/ CMT',
+        'name': 'CMT',
         'tag': 'C#, .NET',
-        'link': 'https://www.geneca.com',
-        'description': `Test xcelor`,
+        'link': 'https://www.capitalmarketstrading.com/',
+        'description': `Develop the largest company GUI for a custom trading interface to be used in-house. Using .NET framework, gathered live trading `,
     },
 ];
 
