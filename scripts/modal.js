@@ -26,9 +26,9 @@ function initModal() {
             document.querySelector(`[data-img="${id}"]`).classList.add('active');
         });
     });
-    var span = document.getElementById("close");
+    var closeIcon = document.getElementById("close");
 
-    span.onclick = function() {
+    closeIcon.onclick = function() {
         // modal.style.display = "none";
         modal.classList.remove('modal-opened');
         body.style['overflow'] = 'scroll';
@@ -41,6 +41,7 @@ function initModal() {
         if (event.target == modal) {
             modal.classList.remove('modal-opened');
             body.style['overflow'] = 'scroll';
+            document.querySelector(`.modal__image-hidden.active`).classList.remove('active');
         }
     }
 }
