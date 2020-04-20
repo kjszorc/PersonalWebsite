@@ -74,12 +74,15 @@ const modalContent = [{
         'name': 'Levinson',
         'tag': 'AngularJS, C#, .NET, and Azure',
         'link': 'http://levinsonlocations.com/',
-        'description': ``,
+        'description': `Developed greenfield web app to be used in-house by employees to manage location assets and data. 
+            Designed full stack solution with a small team to organize clients projects to help manage company resources.`,
     },{
         'name': 'CMT',
         'tag': 'C#, .NET',
         'link': 'https://www.capitalmarketstrading.com/',
-        'description': `Develop the largest company GUI for a custom trading interface to be used in-house. Using .NET framework, gathered live trading `,
+        'description': `Develop the largest company GUI for a custom trading interface to be used 
+            in-house. Using .NET framework, gathered live trading information from exchange servers 
+            using WebSockets and allowed users to place trades on the market.`,
     },
 ];
 
