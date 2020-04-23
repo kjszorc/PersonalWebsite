@@ -65,7 +65,8 @@ const modalContent = [{
         'name': 'Geneca',
         'tag': 'AngularJS, C#, .NET, and Azure',
         'link': 'https://www.geneca.com',
-        'description': `Built custom software solutions for clients in a variety of businesses. Developed prototypes, set up development and QA environments along with databases and security.  `,
+        'description': `Built custom software solutions for clients in a variety of businesses. 
+            Developed prototypes, set up development and QA environments along with databases and security.  `,
     },{
         'name': 'ShipBob',
         'tag': 'VueJS, C#, .NET, and Azure',
